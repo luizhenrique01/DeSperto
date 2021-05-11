@@ -1,0 +1,128 @@
+
+/* header */
+div > .logo1{
+    max-width: 285px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 5%;
+}
+
+
+/* main */
+div .interface-loguin{
+    padding: 20px;
+    padding-bottom: 10px !important;
+    margin: 0 auto;
+    background-color:#DADADA;
+    border-style:hidden;
+    border-radius: 17px;
+    margin-bottom: 10px;
+}
+
+/* usuário e senha */
+h1,h2{
+    font-size: 1.35rem;
+    font-weight:500;
+}
+
+/* usuário */
+h1{
+    color: rgba(43, 92, 124, 0.77) ;
+}
+
+/* senha */
+h2{
+   color: #C30000;
+}
+
+/* campo de texto */
+.label{
+    max-width: 300px;
+    min-height: 50px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+/* Esqueceu senha | redefinir senha*/
+.t1 , .esqueceu-senha {
+    font-size: 0.95rem;
+    font-weight:500;
+    color: #1E3F54;
+    display: inline;
+    
+}
+
+/* criar conta */
+.esqueceu-senha{
+    margin-left: 10px;
+    font-size: 0.93rem  !important;
+} 
+
+/* botão entrar */
+.btn-primary{
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    background-color: #2B5C7C;
+    width: 150px;
+}
+
+/* centalizar novo por aqui? | criar nova conta  */
+div .botao{
+    width: 150px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+/* novo por aqui? | criar nova conta */ 
+.t2 , .criar {
+    font-size: 1.10rem;
+    font-weight:500;
+    color: #1E3F54;
+    display: inline;
+}
+
+/* novo por aqui? | criar nova conta (div em que as duas estão) */
+div .fora-interface{
+    margin: 0 auto;
+    width: 350px;
+    text-align: center;
+}
+
+/* novo poe aqui */
+.criar{
+    margin-left: 5px;
+    text-decoration: none;
+
+}
+
+/* footer */
+div > .png2{
+    max-width: 100px;
+}
+.nuvemblue {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+}
+.nuvemblue img {
+    position: absolute;
+    right: 0px;
+}
+
+
+div > .png1{
+    max-width: 100px;
+}
+.nuvemred {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0;
+}
+.nuvemred img {
+    position: absolute;
+    left: 0px;
+}
