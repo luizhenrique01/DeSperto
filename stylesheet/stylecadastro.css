@@ -1,0 +1,91 @@
+
+/* cabeçalho */
+.header{
+    background: #2B5C7C;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.header_area{
+    padding: 5px;
+}
+
+.menu_area{
+    margin-top: 30px;
+}
+
+.menu_area nav a{
+    color:white;
+    margin-bottom: 10px;
+}
+.menu_area nav a:hover{
+    color: rgb(255, 255, 255);
+}
+.active{
+    background-color: #6ca4cc !important;
+}
+
+.logo{
+    width: 150px;
+}
+
+.main{
+    padding: 0;
+    margin: 0;
+}
+
+/* arco red */
+.arco{
+    width: 150px;
+}
+
+/* texto*/
+.texto{
+    margin-top: 30px;
+    text-align: center;
+}
+h1{
+    font-size: 1.9rem;
+    color: #C30000;
+}
+.preencha{
+    font-size: 1.05rem;
+    color: #A9A9A9;
+}
+
+/* formularios*/
+div > .formulario{
+    text-align: center;
+}
+input{
+    margin-bottom: 18px;
+}
+h2{
+    font-size: 1.5rem;
+    color: #C30000;
+}
+.btn-primary{
+    background-color: #C30000;
+}
+
+/* arco azul  */
+.arcoazul{
+    display: block;
+    width: 170px;
+    position: absolute;
+    right: 0;
+}
+
+
+
+
+/* rodape */
+.footer{
+    background-color: #2B5C7C;
+    height: 50px;
+    margin-bottom: 0;
+}
+.footer_area{
+    padding: 20px;
+}
+
