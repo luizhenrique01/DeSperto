@@ -1,0 +1,23 @@
+.logo{
+    max-width: 70px;
+    margin-top:2px;
+
+}
+
+.nomealarme{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: red;
+    
+
+}
+
+::placeholder{color: red;}
+
+.menu1{background-color: red;
+    margin-top: 5px;
+ }
+
+nav a {color: seashell;}
+  
