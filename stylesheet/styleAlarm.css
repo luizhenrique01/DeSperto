@@ -1,23 +1,38 @@
-.logo{
-    max-width: 70px;
-    margin-top:2px;
-
-}
-
-.nomealarme{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-color: red;
+html{
+    height: 50%; 
     
-
-}
-
-::placeholder{color: red;}
-
-.menu1{background-color: red;
-    margin-top: 5px;
  }
 
-nav a {color: seashell;}
-  
+.nomealarme{
+width:100% ;
+border-style: solid;
+border-color: brown;
+border-top-width: 0;
+border-right-width: 0;
+border-left-width: 0;
+}
+ ::placeholder {color:brown}
+
+
+.nomedoalarme{
+
+
+    margin-top: 20px;
+}
+
+.soneca {
+
+    background-color: rgb(74, 74, 160);
+}
+
+.temposoneca{
+
+    background-color: rgb(118, 118, 184);
+}
+
+.temporario{
+
+    margin-top: 20px;
+    background-color: rgb(118, 118, 184);
+    
+}
