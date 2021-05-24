@@ -1,34 +1,34 @@
-
 /* cabeçalho */
-.header{
+header{
+    max-width: 100%;
     background: #2B5C7C;
-    margin-bottom: 0px;
     text-align: center;
 }
 
-.header_area{
-    padding: 5px;
+.header_area .logo{
+    max-width: 170px;
+    
 }
 
+/*navegação*/
 .menu_area{
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .menu_area nav a{
     color:white;
     margin-bottom: 10px;
 }
-.menu_area nav a:hover{
-    color: rgb(255, 255, 255);
+.menu_area a:hover{
+    color:#2B5C7C;
+    background-color: #ffffff;
 }
 .active{
-    background-color: #6ca4cc !important;
+    background-color: #ffffff !important;
+    color: #C30000!important;
 }
 
-.logo{
-    width: 150px;
-}
-
+/*area principal do corpo*/
 .main{
     padding: 0;
     margin: 0;
@@ -44,28 +44,83 @@
     margin-top: 30px;
     text-align: center;
 }
-h1{
+.texto h1{
     font-size: 1.9rem;
     color: #C30000;
 }
-.preencha{
+.texto .preencha{
     font-size: 1.05rem;
     color: #A9A9A9;
 }
 
 /* formularios*/
+.formulario{
+    margin: 0px;
+    border: 0px;
+    padding: 5px;
+    
+}
+
 div > .formulario{
     text-align: center;
+    justify-content: center;
+    
 }
 input{
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
-h2{
-    font-size: 1.5rem;
-    color: #C30000;
+.formulario label{
+    font-size: 25px;
+    color: #ffffff;
 }
-.btn-primary{
+
+.formulario input{   
+    border: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.formulario .nome{
+    margin-bottom: 8px;
     background-color: #C30000;
+    padding: 1%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.formulario .email{
+    margin-bottom: 8px;
+    background-color: #C30000;
+    padding: 1%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.formulario .senha{
+    margin-bottom: 8px;
+    background-color: #C30000;
+    padding: 1%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.formulario .conf-senha{
+    margin-bottom: 8px;
+    background-color: #C30000;
+    padding: 1%;
+    width: 100%;
+    border-radius: 4px;
+}
+
+
+.btn-primary{
+    border: 0px;
+    background-color: #C30000;
+}
+
+.btn-primary:hover{
+    border: 0px;
+    background-color: #c300008e;
 }
 
 /* arco azul  */
@@ -76,16 +131,10 @@ h2{
     right: 0;
 }
 
-
-
-
 /* rodape */
-.footer{
-    background-color: #2B5C7C;
-    height: 50px;
-    margin-bottom: 0;
+footer{
+    margin-top: 50px;
+    background-color:#2B5C7C;
+    padding: 15px;    
+    margin-bottom: 0px ;
 }
-.footer_area{
-    padding: 20px;
-}
-
