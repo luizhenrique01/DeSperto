@@ -1,4 +1,3 @@
-
 /* header */
 div > .logo1{
     max-width: 285px;
@@ -6,7 +5,6 @@ div > .logo1{
     margin-bottom: 10px;
     margin-top: 5%;
 }
-
 
 /* main */
 div .interface-loguin{
@@ -37,7 +35,7 @@ h2{
 
 /* campo de texto */
 .label{
-    max-width: 300px;
+    width: 100%;
     min-height: 50px;
     border-radius: 10px;
     border-style: solid;
@@ -96,33 +94,23 @@ div .fora-interface{
 }
 
 /* footer */
-div > .png2{
-    max-width: 100px;
+.png2{
+    width: 100px;
+    height: 100px;
+    background-color: #C30000;
 }
-.nuvemblue {
-    width: 100%;
-    position: absolute;
+.cnuvem{
+    position: fixed;
     bottom: 0;
-    left: 0;
-    padding: 0;
+    right: 0;
 }
-.nuvemblue img {
-    position: absolute;
-    right: 0px;
-}
-
 
 div > .png1{
     max-width: 100px;
 }
 .nuvemred {
-    width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
-    padding: 0;
+    left: 0;
 }
-.nuvemred img {
-    position: absolute;
-    left: 0px;
-}
+
