@@ -26,7 +26,7 @@
                 <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
                     <i class="bi bi-toggle-off ">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-toggle-off" viewBox="0 0 16 16">
+                            class="bi bi-toggle-off " viewBox="0 0 16 16">
                             <path
                                 d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
                         </svg>
@@ -60,10 +60,19 @@
 
     <section class="container">
         <div class="col-lg-12">
-            <div class="row">
-                <div class="col-12">
+            <div class="row diassemana">
+                <div class="col-lg-12 menu">
                     <!--Dias da semana aqui-->
-                    (Dias da Semana javaScript)
+                    <nav class="nav">
+                        <a class="nav-link" href="#"> D </a>
+                        <a class="nav-link" href="#"> S </a>
+                        <a class="nav-link" href="#"> T </a>
+                        <a class="nav-link" href="#"> Q </a>
+                        <a class="nav-link" href="#"> Q </a>
+                        <a class="nav-link" href="#"> S </a>
+                        <a class="nav-link" href="#"> S </a>
+                      </nav><!--&#32; &#32; -->
+                          
                 </div>
             </div>
         </div>
@@ -127,10 +136,10 @@
     <section class="container">
         <div class="col-12">
             <div class="row ">
-                <div class="col-12">
-                    <input class="notas" placeholder="Notas do alarme">
+                
+                    <input class="notas" name="notas" placeholder="Notas do alarme">
 
-                </div>
+                
             </div>
         </div>
 
@@ -223,8 +232,7 @@
             <div class="row salvar">
                 <div class="col-12">
 
-                    (Salvar javaScript)
-
+                    <button id="botaosalvar" type="submit" name="salvar">Salvar</button>
 
                 </div>
 
