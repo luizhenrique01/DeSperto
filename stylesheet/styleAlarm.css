@@ -22,27 +22,27 @@ border-left-width: 0;
 
 .soneca {
 
-    background-color: rgb(74, 74, 160);
+    background-color: #2B5C7C;
     margin-top: 20px;
    
 }
 
 .temposoneca{
 
-    background-color: rgb(118, 118, 184);
+    background-color: #5C819A ;
 }
 
 .temporario{
 
     margin-top: 20px;
-    background-color: rgb(118, 118, 184);
+    background-color: #5C819A ;
     
 }
 
 
 .notas{
 
-    background-color: rgb(74, 74, 160);
+    background-color: #2B5C7C;
    width: 100%;
    height: 100px;
     margin-top: 20px;
@@ -52,14 +52,14 @@ border-left-width: 0;
 
 .somAlarme {
 
-    background-color: rgb(74, 74, 160);
+    background-color: #2B5C7C;
     margin-top: 20px;
    
 }
 
 .somdoAlarme{
 
-    background-color: rgb(118, 118, 184);
+    background-color: #5C819A;
 
 
 }
@@ -74,4 +74,34 @@ border-left-width: 0;
     text-align: center;
 
     margin-top: 20px;
+    
+    
 }
+#botaosalvar{
+    background-color:#C30000 ;
+    width: 50%;
+}
+
+.diassemana{
+
+    border: 1px;
+    border-style: solid;
+    background-color: #2B5C7C;
+    text-align: center;
+    
+}
+.diassemana nav > a{
+
+    color: white;
+}
+
+
+.diassemana{
+    align-items: center;
+    text-align: center;
+}
+.menu{
+    text-align: center;
+    align-items: center;
+}
+
