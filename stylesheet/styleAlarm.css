@@ -2,6 +2,16 @@ html{
     height: 50%; 
     
  }
+.logo{
+    max-width: 75px;
+    margin-top: 0;
+}
+.header{
+
+    margin-top: 10px;
+    
+}
+
 
 .nomealarme{
 width:100% ;
@@ -104,4 +114,36 @@ border-left-width: 0;
     text-align: center;
     align-items: center;
 }
+
+#dropdownMenuButton {
+
+    background-color:#2B5C7C ;
+}
+
+.diassemana nav a:hover{/*Quando se passar o mouse por essa área, acontecerá o código abaixo*/
+    background-color: #C30000;
+}
+
+
+
+.semanadias{
+    /*display: none;*/
+}
+
+
+.semana{
+
+    padding-bottom: 0px;
+    padding-left: 2px;
+    
+    
+}
+
+h6 {
+    padding-left: 22px;
+}
+
+
+
+.semana h6 {color: white;}
 
