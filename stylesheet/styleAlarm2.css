@@ -1,0 +1,443 @@
+#diasSemanas{
+    background: #2B5C7C;
+    position: relative;
+    width: 460px;
+   left: 20px;
+   
+   
+}
+#cabecalho{
+    background: #C30000;
+    position: rellative;
+    width: 550px;
+    
+     
+    
+    height: 75px;
+}
+#nomeAlarme{
+    outline: none;
+    border: 0px;
+    margin-right:240px ;
+    width: 200px;
+    color: #C30000;
+    
+    
+}
+#nomeAlarmeField{
+    position:relative;
+    
+   width: 480px;
+  
+    color: #C30000;
+   
+   
+    
+}
+
+
+#textoHorario{
+    font-size: 20px;
+    position:relative;
+    color:#C30000 ;
+}
+#horarioSet{
+    
+    position: relative;
+    left: 50px;
+    
+    
+}
+#horas{
+    width: 150px;
+    height: 150px;
+    font-size: 100px;
+    left: 100px;
+    background-color: #2B5C7C;
+    border-radius: 25px;
+}
+#minutos{
+    width: 150px;
+    height: 150px;
+    left: 100px;
+    font-size: 100px;
+    background-color: #2B5C7C;
+    border-radius: 25px;
+    
+}
+#doisPontos{
+  font-size: 100px;
+  text-align: left;
+  color:#C30000;
+}
+#diasDaSemanaTxt{
+    position: relative;
+   font-size: 20px;
+   text-align: left;
+    
+    color:  #2B5C7C;
+}
+::placeholder{
+    color:#C30000 ;
+}
+#underline{
+    text-decoration: underline;
+   
+    position: relative;
+    
+    color: #C30000;
+}
+#botaoNegarNome{
+    background-color:rgb(51, 255, 0);
+
+    border-radius: 50px;
+    border-color: rgb(51, 255, 0);
+    transition-duration: 0.4s;
+    height: 25px;
+    width: 25px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 24px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 10px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #C30000;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #C30000;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(25px);
+  }
+  
+  
+  .slider.round {
+    border-radius: 30px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  
+  
+  #botaoDomingo{
+    background: #2B5C7C;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    transition-duration: 0.4s;
+    padding-left:10px;
+   padding-right:20px;
+   width:10px;
+   height: 30px;
+   margin-left: 10px;
+   margin-right: 10px;
+
+}
+
+
+#botaoSegunda{
+    background: #2B5C7C;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    transition-duration: 0.4s;
+    padding-left:10px;
+   padding-right:20px;
+   width: 10px;
+   height: 30px;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+
+#botaoTerca{
+    background: #2B5C7C;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    transition-duration: 0.4s;
+    padding-left:10px;
+    padding-right:20px;
+   width: 10px;
+   height: 30px;
+   text-align: center;
+   margin-left: 10px;
+   margin-right: 10px;
+    
+}
+#botaoQuarta{
+    background: #2B5C7C;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    transition-duration: 0.4s;
+    padding-left:10px;
+    padding-right:20px;
+   width: 10px;
+   height: 30px;
+   text-align: center;
+   margin-left: 10px;
+   margin-right: 10px;
+    
+}
+#botaoQuinta{
+    background: #2B5C7C;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    transition-duration: 0.4s;
+    padding-left:10px;
+    padding-right:20px;
+   width: 10px;
+   height: 30px;
+   text-align: center;
+   margin-left: 10px;
+   margin-right: 10px;
+    
+}
+#botaoSexta{
+    background: #2B5C7C;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    transition-duration: 0.4s;
+    padding-left:10px;
+    padding-right:20px;
+   width: 10px;
+   height: 30px;
+   text-align: center;
+   margin-left: 10px;
+   margin-right: 10px;
+    
+}
+#botaoSabado{
+    background: #2B5C7C;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+    transition-duration: 0.4s;
+    padding-left:10px;
+    padding-right:20px;
+   width: 10px;
+   height: 30px;
+   text-align: center;
+   margin-left: 10px;
+   margin-right: 10px;
+    
+}
+#adiar{
+    position: relative;
+    left: 20px;
+    width: 460px;
+    background: #2B5C7C;
+    
+}
+#adiarTxt{
+    margin-right: 340px;
+    font-size: 20px;
+    color: rgb(255, 255, 255)
+}
+#adiarTempoSet{
+    position: relative;
+    left: 20px;
+    background: #2b5c7c96;
+    width: 460px;
+    
+    
+}
+#adiarVirgula{
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+}
+#adiarMinutos{
+    background: #2b5c7c96;
+    color: rgb(255, 255, 255);
+}
+#adiarVezes{
+    background: #2b5c7c96;
+    color: rgb(255, 255, 255);
+}
+input:disabled{
+    background: #cfdbe2b7;
+}
+#alarmeTemporario{
+    position: relative;
+    width: 460px;
+    left: 20px;
+
+    
+    background-color: #2b5c7c96;
+
+}
+#botaoAlarmeTemp{
+    
+    margin-left: 250px;
+}
+#notasDoAlarmeTxt{
+    position: relative;
+   font-size: 20px;
+    
+}
+#notasDoAlarmeBox{
+    position: relative;
+    text-align: top;
+    left: 20px;
+    width:460px;
+    height: 100px;
+    border-radius: 25px;
+    outline: none;
+    background: #2B5C7C;
+    color: rgb(255, 255, 255);
+}
+#anotaçoesDoAlarmeBox{
+    position: relative;
+    text-align: top;
+    left: 20px;
+    width:460px;
+    height: 100px;
+    border-radius: 25px;
+    outline: none;
+    background: #2B5C7C;
+    color: rgb(255, 255, 255);
+}
+#anotacoesDoAlarmeTxt{
+    position: relative;
+   
+    position: relative;
+   font-size: 20px;
+    
+
+}
+#alarmeFeriados{
+    position: relative;
+    width: 460px;
+    left: 20px;
+    background: #2B5C7C;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    margin-top: 20px;
+}
+#alarmeFeriadosTxt{
+    margin-right: 75px;
+}
+#alarmeNotificacao{
+    position: relative;
+    width: 460px;
+    left: 20px;
+    background: #2B5C7C;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    margin-top: 20px;
+}
+#alarmeNotificacaoTxt{
+    margin-right: 180px;
+}
+#notificacaoOpcao{
+    position: relative;
+    left: 20px;
+    background: #2b5c7c96;
+    width: 460px;
+}
+#notificacaoMinutos{
+    background: #2b5c7c96;
+    color: rgb(255, 255, 255);
+}
+
+#alarmeSons{
+    position: relative;
+    width: 460px;
+    left: 20px;
+    background: #2B5C7C;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    margin-top: 20px;
+}
+#alarmeSonsTxt{
+    margin-right: 250px;
+}
+#sonsLista{
+    position: relative;
+    left: 20px;
+    background: #2b5c7c96;
+    width: 460px;
+}
+#sonsOpcao{
+  margin-right: 300px;
+    position: relative;
+    width: 460px;
+    left: 20px;
+    background: #2b5c7c96;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+}
+#pastasLista{
+    position: relative;
+    left: 20px;
+    background: #2b5c7c96;
+    width: 460px;
+}
+#pastasOpcao{
+  margin-right: 300px;
+    position: relative;
+    width: 460px;
+    left: 20px;
+    background: #2b5c7c96;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+}
+
+#botaosalvar{
+    background-color: #C30000;
+position: absolute;
+width: 460px;
+left: 25px;
+}
