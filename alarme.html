@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheet/styleAlarm.css">
+    <script src="javascript/alarme.js"></script>
 
 
     <title>Definição do alarme</title>
@@ -17,7 +18,7 @@
 <body>
     <header class="container">
         <div class="col-lg-12">
-            <div class="row header">
+            <div class="row header fechar">
                 <div class="col-5">
                     <a href="index.html"><i class="bi bi-x-circle"></i><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"  fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -36,26 +37,14 @@
         <div class="col-lg-12">
             <div class="row nomedoalarme">
                 <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                    <input class="nomealarme" placeholder="Nome do alarme">
+                    <input class="nomealarme" placeholder="Nome do alarme"id=nomeAlarme>
                 </div>
 
 
-                <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
-                    <i class="bi bi-toggle-off ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-toggle-off " viewBox="0 0 16 16">
-                            <path
-                                d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
-                        </svg>
-                    </i>
-                    <!-- Botão para quando estiver ativado
-                <i class="bi bi-toggle-on">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-toggle-on" viewBox="0 0 16 16">
-                        <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
-                      </svg>
-                </i>
-                
-                -->
+                <div> <label class="switch" >
+                    <input type="checkbox"id="botaoNomeToggle">
+                    <span class="slider round"></span>
+                </label>
                 </div>
             </div>
         </div>
@@ -64,7 +53,7 @@
     </section>
 
     <section class="container">
-        <div class="col-lg-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 ">
             <div class="row">
                 <div class="col-12">
                     <!--Relógio aqui-->
@@ -76,9 +65,9 @@
 
 
     <section class="container">
-        <div class="col-lg-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row diassemana">
-                <div class="col-lg-12 menu">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <!--Dias da semana aqui-->
                     <!--
                     <nav class="nav">
@@ -91,42 +80,16 @@
                         <a class="nav-link" href="#"> S </a>
                       </nav>--><!--&#32; &#32; -->
 
-                      
+                      <button id="botaoD" class="botaosemana">D</button>
+                      <button id="botaoS" class="botaosemana" >S</button>
+                      <button id="botaoT" class="botaosemana" >T</button>
+                      <button id="botaoQ" class="botaosemana">Q</button>
+                      <button id="botaoQui" class="botaosemana">Q</button>
+                      <button id="botaoSe" class="botaosemana">S</button>
+                      <button id="botaoSab" class="botaosemana">S</button>
+
                     
-               <input type="checkbox" id="domingo" class="semanadias">
-               <label for="domingo" class="semana">
-                <h6>D</h6>
-               </label>
-
-               <input type="checkbox" id="segunda" class="semanadias">
-               <label for="segunda" class="semana">
-               <h6>S</h6>  
-               </label>
-
-               <input type="checkbox" id="terca" class="semanadias">
-               <label for="terca" class="semana">
-                <h6>T</h6>
-               </label>
-
-               <input type="checkbox" id="quarta" class="semanadias">
-               <label for="quarta" class="semana">
-                <h6>Q</h6>
-               </label>
-
-               <input type="checkbox" id="quinta" class="semanadias">
-               <label for="quinta" class="semana">
-                <h6>Q</h6>
-               </label>
-
-               <input type="checkbox" id="sexta" class="semanadias">
-               <label for="sexta" class="semana">
-                <h6>S</h6>
-               </label>
-
-               <input type="checkbox" id="sabado" class="semanadias">
-               <label for="sabado" class="semana" >
-                <h6>S</h6>
-               </label>
+               
 
                 </div>
             </div>
@@ -135,29 +98,31 @@
 
 
     <section class="container">
-        <div class="col-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row soneca">
                 <div class="col-10 ">
                     <p>Soneca</p>
                 </div>
 
-                <div class="col-2">
-                    <i class="bi bi-toggle-off ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-toggle-off" viewBox="0 0 16 16">
-                            <path
-                                d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
-                        </svg>
-                    </i>
+                <div >
+                    <label class="switch" >
+                    <input type="checkbox"id="botaoSonecaToggle">
+                    <span class="slider round"></span>
+                </label>
                 </div>
             </div>
         </div>
 
-        <div class="col-12">
-            <div class="row temposoneca">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="row temposoneca"id="sonecaPlace">
                 <div class="col-12 ">
                     <!--Tempo de soneca e quantas vezes permitidas-->
-                    (javaScript)
+                    <select name="soneca" id="soneca">
+                        <option value="5m">5 minutos , 3 Vezes</option>
+                        <option value="saab">5 minutos , 5 vezes</option>
+                        <option value="opel">10 minutos , 3 vezes</option>
+                        <option value="audi">10 minutos , 5 vezes</option>
+                      </select>
                 </div>
             </div>
         </div>
@@ -166,20 +131,16 @@
     </section>
 
     <section class="container">
-        <div class="col-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row temporario">
                 <div class="col-10">
                     <p>Alarme Temporário?</p>
                 </div>
 
-                <div class="col-2">
-                    <i class="bi bi-toggle-off ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-toggle-off" viewBox="0 0 16 16">
-                            <path
-                                d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
-                        </svg>
-                    </i>
+                <div><label class="switch">
+                    <input type="checkbox" id="botaoAlarmeTempToggle">
+                    <span class="slider round"></span>
+                </label>
                 </div>
             </div>
         </div>
@@ -188,10 +149,10 @@
     </section>
 
     <section class="container">
-        <div class="col-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row ">
                 
-                    <input class="notas" name="notas" placeholder="Notas do alarme">
+                    <input class="notas" name="notas" placeholder="Notas do alarme"id="notasDoAlarmeBox">
             </div>
         </div>
 
@@ -199,21 +160,17 @@
 
 
     <section class="container">
-        <div class="col-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row temporario">
                 <div class="col-10">
                     <p>Desativar alarme em feriados?</p>
 
                 </div>
 
-                <div class="col-2">
-                    <i class="bi bi-toggle-off ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-toggle-off" viewBox="0 0 16 16">
-                            <path
-                                d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
-                        </svg>
-                    </i>
+                <div><label class="switch">
+                    <input type="checkbox" id="botaoFeriadoToggle">
+                    <span class="slider round"></span>
+                </label>
 
                 </div>
 
@@ -226,23 +183,17 @@
 
 
     <section class="container">
-        <div class="col-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row somAlarme">
                 <div class="col-10 ">
                     <p>Som do alarme</p>
 
-
                 </div>
 
-                <div class="col-2">
-                    <i class="bi bi-toggle-off ">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-toggle-off" viewBox="0 0 16 16">
-                            <path
-                                d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z" />
-                        </svg>
-                    </i>
-
+                <div></div> <label class="switch" >
+                    <input type="checkbox"id="botaoSomToggle">
+                    <span class="slider round"></span>
+                </label>
 
                 </div>
 
@@ -250,7 +201,7 @@
             </div>
         </div>
 
-        <div class="col-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row somdoAlarme">
                 <div class="col-12 ">
 
@@ -265,7 +216,7 @@
     </section>
 
     <section class="container">
-        <div class="col-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <div class="row pasta">
                 <div class="col-12">
             
@@ -289,11 +240,11 @@
     </section>
 
     <section class="container">
-        <div class="col-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-122">
             <div class="row salvar">
                 <div class="col-12">
 
-                    <button id="botaosalvar" type="submit" name="salvar">Salvar</button>
+                    <button id="botaosalvar" type="submit" name="salvar"id="botaosalvar">Salvar</button>
 
                 </div>
 
