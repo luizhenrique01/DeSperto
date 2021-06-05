@@ -24,6 +24,7 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-8 col-lg-10 menu_area">
                         <nav class="nav nav-pills flex-column flex-sm-row">
+                            <a class="flex-sm-fill text-sm-center nav-link " href="index.html">Entrar</a>
                             <a class="flex-sm-fill text-sm-center nav-link " href="#">Sobre</a>
                             <a class="flex-sm-fill text-sm-center nav-link" href="#">Download</a>
                             <a class="flex-sm-fill text-sm-center nav-link" href="#">Contato</a>
@@ -44,31 +45,41 @@
         </div>-->
 
         <div class="row">
+
             <div class="col-12 texto">
                 <h1>Crie sua conta</h1>
                 <p class="preencha">Preencha seus dados</p>
+            </div>
+            <div class="col-12 texto">
+                <input type="text" id="id" hidden> <!-- Id hidden -->
             </div>
 
             <div class="col-12 formulario">
                 <div class="nome">
                     <label>Nome: </label>
-                    <input type="text" class="label" id="nomeUsuario" name="nome" size="35" />
+                    <input type="text" class="label" id="nomeUsuario" name="nome" size="35" required />
                 </div>
                 <div class="email">
                     <label>Email: </label>
-                    <input type="email" class="label" id="emailUsuario" name="nome" size="35" />
+                    <input type="email" class="label" id="emailUsuario" name="nome" size="35" required />
                 </div>
                 <div class="senha">
                     <label>Senha: </label>
-                    <input type="password" class="label" id="senhaUsuario" name="nome" size="35" />
+                    <input type="password" class="label" id="senhaUsuario" name="nome" size="35" required />
                 </div>
                 <div class="conf-senha">
                     <label>Confirme a senha: </label>
-                    <input type="password" class="label" id="confirmarSenha" name="nome" size="35" />
+                    <input type="password" class="label" id="confirmarSenha" name="nome" size="35" required />
                 </div>
                 <div class="botao">
                     <button class="btn btn-primary" type="submit" onclick="CriarConta()">Criar conta</button>
                 </div>
+                <!--
+                 --- Botão de cancelar opcional para ser feito, precisa ser alinhado ao lado do botao criar conta ---
+                <div class="botao">
+                    <a href="index" class="btn btn-primary"> Voltar </a>
+                </div> 
+                -->
             </div>
         </div>
     </main>

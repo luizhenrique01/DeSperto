@@ -3,11 +3,8 @@ function CriarConta() {
     var emailUsuario = document.getElementById('emailUsuario').value;
     var senhaUsuario = document.getElementById('senhaUsuario').value;
     var confirmarSenha = document.getElementById('confirmarSenha').value;
-    let nomeUsuario2 = document.getElementById('nomeUsuario');
-    let emailUsuario2 = document.getElementById('emailUsuario');
-    let senhaUsuario2 = document.getElementById('senhaUsuario');
-    let confirmarSenha2 = document.getElementById('confirmarSenha');
 
+    //validação de campos
     if (senhaUsuario == '' && nomeUsuario == '' && emailUsuario == '' && confirmarSenha == '') {
         Swal.fire({
             icon: 'error',
@@ -43,29 +40,51 @@ function CriarConta() {
             text: 'Campo Confirmar senha vazio',
         })
     } else {
+        const usuario = { id: Date.now(), permission: 'true', nomeUsuario, emailUsuario, senhaUsuario }
+        let usuarioGravado = JSON.parse(localStorage.getItem("usuarios"));
 
-        if (senhaUsuario === confirmarSenha) {
+        if (usuarioGravado == null) { //verificacao para criar usuario
+            localStorage.setItem('usuarios', JSON.stringify([])); //criando array de usuarios
+            usuarioGravado = JSON.parse(localStorage.getItem('usuarios')); // atualiza array usuarios 
 
-            nomeUsuario2.value = "";
-            emailUsuario2.value = "";
-            senhaUsuario2.value = "";
-            confirmarSenha2.value = "";
+            //validação de email 
 
-            Swal.fire({
-                icon: 'success',
-                title: 'Uhul!',
-                text: 'Cadastrado com sucesso!',
-            })
+            let usuarioIndex = usuarioGravado.findIndex(usuario => usuario.emailUsuario === emailUsuario);
+            if (usuarioIndex !== -1) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Email já está cadastrado no sistema!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else {
+                usuarioGravado.push(usuario); //adiciona novo usuario ao array
+                localStorage.setItem('usuarios', JSON.stringify(usuarioGravado)); // grava novo usuario no localstorage         
+            }
 
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'As senhas não são iguais',
-            })
+        } else { //usuario ja existente (!= de null)
+            let usuarioIndex = usuarioGravado.findIndex(usuario => usuario.emailUsuario === emailUsuario);
+            if (usuarioIndex !== -1) { //ja existe um email na memoria
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Email já está cadastrado no sistema!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Cadastrado com sucesso!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                usuarioGravado.push(usuario); //adiciona um novo usuario no array
+                localStorage.setItem('usuarios', JSON.stringify(usuarioGravado)); //grava no local storage  
+                document.getElementById('nomeUsuario').value = "";
+                document.getElementById('emailUsuario').value = "";
+                document.getElementById('senhaUsuario').value = "";
+                document.getElementById('confirmarSenha').value = "";
+            }
         }
-
     }
-
-
 }
