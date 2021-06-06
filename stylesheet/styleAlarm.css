@@ -183,6 +183,7 @@ select{
 ::placeholder{
 
     color: white;
+
 }
 .switch {
     position: relative;
@@ -243,3 +244,5 @@ select{
   .slider.round:before {
     border-radius: 50%;
   }
+
+}

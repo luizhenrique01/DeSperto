@@ -1,28 +1,68 @@
 function Login() {
-
-    let nomeUsuario = document.getElementById('nomeUsuario').value;
+    let emailUsuario = document.getElementById('emailUsuario').value;
     let senhaUsuario = document.getElementById('senhaUsuario').value;
-    //teste para o login 
-    let nomeFake = "luizhassis01@gmail.com"
-    let senhaFake = "luiz123"
 
-    if (nomeUsuario === nomeFake) {
-        if (senhaUsuario === senhaFake) {
-            window.location.href = "alarme.html"
-
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Sua senha está errada',
-            })
-        }
-    } else {
+    if (emailUsuario == '' && senhaUsuario == '') {
+        document.getElementById('emailUsuario').focus();
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Seu e-mail está errado',
+            text: 'Nenhum campo preenchido!',
+        });
+    } else if (emailUsuario == '') {
+        document.getElementById('emailUsuario').focus();
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Campo de Email vazio!',
+        });
+    } else if (senhaUsuario == '') {
+        document.getElementById('senhaUsuario').focus();
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Campo senha vazio',
         })
-    }
+    } else {
 
+        //recuperando valor do LocalStorage
+        let usuariosGravados = JSON.parse(localStorage.getItem('usuarios'));
+        let usuarioIndex = usuariosGravados.findIndex(usuario => usuario.emailUsuario === emailUsuario);
+        if (usuarioIndex === -1) { // -1 = email nao encontrado
+            Swal.fire({
+                icon: 'warning',
+                title: 'Email fora do registro!',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        } else { //email validado => validacao senha
+            if (usuariosGravados[usuarioIndex].senhaUsuario !== senhaUsuario) { //senha incorreta
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Senha incorreta!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            } else { // email & seha corretos
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    onOpen: (toast) => {
+                        toast.addEventListener('mouseenter', Swal.stopTimer)
+                        toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                });
+
+                Toast.fire({
+                    icon: 'success',
+                    title: `Bem vindo, ${usuariosGravados[usuarioIndex].nomeUsuario} !`
+                });
+                window.location.href = 'alarme.html';
+
+            }
+        }
+    }
 }
