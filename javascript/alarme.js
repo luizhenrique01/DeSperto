@@ -25,7 +25,7 @@ onload = () => {
         alarmeDias[6] = botaoSab;
         let soneca = document.getElementById("soneca").value;
         let nomeDoAlarme = document.getElementById("nomeAlarme").value;
-        console.log(nomeDoAlarme);
+        
         let alarmeNotas = document.getElementById("notasDoAlarmeBox").value;
         let feriado= botaoFeriado;
         let anotacoesAlarme = "nada";
@@ -39,11 +39,7 @@ onload = () => {
         }
 
 
-        console.log(novoAlarme);
-        console.log(contador);
-        console.log(botaoD);
-        let convert = JSON.stringify(novoAlarme);
-        console.log(convert);
+       
 
 
 
