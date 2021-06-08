@@ -1,0 +1,74 @@
+.img1{
+    width: 140px;
+    float: right;
+}
+.btnMenu{
+    margin-top: 5%;
+    margin-left: 3%;
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+}
+.imgUsuario{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.nomeUsuario{
+    color: #2B5C7C;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.imgusu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pastaAlarme{
+    color: #C30000;
+}
+.f1 {
+    height: 22px;
+
+}
+.observacao{
+    text-align: center;
+    bottom: 2px;
+    text-align: end;
+    color: white;
+    font-size: 0.7rem;
+}
+.divPrincipal{
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    margin: 20px;
+    padding: 0px;
+    border-radius: 20px;
+    background-color: rgba(43, 92, 124, 0.77);
+    height: 320px;
+}
+.div1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 8px;
+}
+h1{
+    font-size: 1.2rem;
+    display: inline;
+    text-align: center;
+}
+.imgNova-pasta{
+    width: 50px;
+}
+.imgNovo-alarme{
+    width: 55px;
+}
+footer{
+    color: #C30000;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
