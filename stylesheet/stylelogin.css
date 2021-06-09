@@ -36,10 +36,20 @@ h2{
 
 /* campo de texto */
 .label{
-    max-width: 300px;
+    width: 300px;
     min-height: 50px;
     border-radius: 10px;
     border-style: solid;
+}
+@media screen and (min-width: 336px) and (max-width:355px){
+    .label{
+        width: 270px;
+    }
+}
+@media screen and (min-width: 0px) and (max-width:335px){
+    .label{
+        width: 260px;
+    }
 }
 
 /* Esqueceu senha | redefinir senha*/
