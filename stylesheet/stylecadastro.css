@@ -1,31 +1,169 @@
+/* Corpo */
+body{
+    margin: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    background-image:url(img/fundo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /* cabeçalho */
 header{
+    position: relative;
     max-width: 100%;
     background: #2B5C7C;
     text-align: center;
 }
 
+header{
+    margin: 0px;
+    padding: 10px;
+}
+
 .header_area .logo{
-    max-width: 170px;
+    display: block;
+    max-width: 150px;
+    left: 80%;
     
 }
 
 /*navegação*/
 .menu_area{
-    margin-top: 40px;
+    margin-top: 1%;
 }
 
-.menu_area nav a{
-    color:white;
-    margin-bottom: 10px;
+.menu_area nav{
+    right: 10px;
 }
-.menu_area a:hover{
+
+.menu_area nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+}
+
+.menu_area nav ul li {
+    float: left;
+}
+
+.menu_area nav ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.menu_area .nav a:hover{
     color:#2B5C7C;
     background-color: #ffffff;
 }
 .active{
     background-color: #ffffff !important;
     color: #C30000!important;
+}
+
+/*Menu toggle*/
+#menuToggle{
+    display: none;
+}
+.menu-icon{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    header .container{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+    }
+
+    .header_area .logo{
+        max-width: 170px;
+        margin: 0px !important;
+        padding-left: 10%;
+    }
+
+    header nav{
+        display: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu{
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 0%;
+        background-color: #0000007c;
+        overflow: hidden;
+        padding: 0px;
+        margin: 0px;
+        transition: height 0.3s;
+
+    }
+    .menu_area{
+        margin-top: 0px !important;
+    }
+
+    .menu_area nav ul{
+        margin-left: 0px;
+    }
+
+    .menu li {
+        display: absolute;
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px
+    };
+
+    .menu li a{
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-icon{
+        position: absolute;
+        display: block;
+        color:rgb(255, 255, 255);
+        top: 15px;
+        right: 30px;
+        line-height: 60px;
+        z-index: 999;
+    }
+
+    .menu-icon i{
+      font-size: 1.7rem;  
+    }
+
+    #menuToggle:checked ~ label i:nth-child(2){           
+        position: fixed; 
+        right: 30px;
+        display: block;
+    }
+
+    #menuToggle:checked ~ label i:first-child{    
+        display: none;
+    }
+
+    #menuToggle:not(checked) ~ label i:nth-child(2){
+        display: none;
+    }
+
+    #menuToggle:not(checked) ~ label i:first-child{
+        display: block;
+    }
+
+    #menuToggle:checked ~ ul{
+        height: 100%;
+    }
+        
 }
 
 /*area principal do corpo*/
@@ -67,6 +205,7 @@ div > .formulario{
     
 }
 input{
+    min-width: 75%;
     margin-bottom: 10px;
 }
 .formulario label{
@@ -85,7 +224,7 @@ input{
     background-color: #C30000;
     padding: 1%;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 .formulario .email{
@@ -93,7 +232,7 @@ input{
     background-color: #C30000;
     padding: 1%;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 .formulario .senha{
@@ -101,7 +240,7 @@ input{
     background-color: #C30000;
     padding: 1%;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 .formulario .conf-senha{
@@ -109,7 +248,7 @@ input{
     background-color: #C30000;
     padding: 1%;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 
@@ -120,7 +259,17 @@ input{
 
 .btn-primary:hover{
     border: 0px;
-    background-color: #c300008e;
+    color: #ffffff ;
+    background-color: #c3000083;
+}
+
+.botao-voltar a{ 
+    background-color: #ffffff;
+    color: #2B5C7C;
+    border: 2px solid #2B5C7C;
+    margin-top: 5%;
+    margin-left: 70% !important;
+
 }
 
 /* arco azul  */
@@ -133,8 +282,48 @@ input{
 
 /* rodape */
 footer{
-    margin-top: 50px;
+    max-height: 100%;
     background-color:#2B5C7C;
-    padding: 15px;    
-    margin-bottom: 0px ;
+    margin-top: 50px ;   
+    bottom: 0px ;
+}
+
+footer p{
+    padding: 0px;
+    color: white;
+    text-align: center;
+    
+}
+
+/*Responsividade para pagina WEB */
+@media(min-width: 599px){
+
+    .nav{
+        padding-left: 30%;
+    }
+
+    .principal{
+        max-width: 100%;
+        border: 0px;
+        margin: 5px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;        
+        align-items: center;
+    }
+    .formulario{
+        text-align:center !important;
+        background-color: rgb(255, 255, 255);
+        width: 450px;
+        height: 370px;
+    }
+
+    .botao{
+        text-align: center !important;
+    }
+    
+    .botao-voltar{
+        text-align: center !important;
+    }
 }
