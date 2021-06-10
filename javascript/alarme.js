@@ -1,4 +1,4 @@
-var contador = 0;
+var contador=0;
 var botaoD = 1;
 var botaoS = 1;
 var botaoT = 1;
@@ -10,8 +10,10 @@ var botaoSoneca = 1;
 var botaoFeriado = 0;
 
 
+
 onload = () => {
     document.querySelector('#botaosalvar').onclick = function () {
+        contador=localStorage.getItem("numeroAlarme");
         alert("alarme salvo com sucesso!");
         let alarmeHoras = 0;
         let alarmeMinutos = 0;
@@ -37,7 +39,8 @@ onload = () => {
             var novoAlarme = criarAlarme(alarmeHoras, alarmeMinutos, alarmeDias, nomeDoAlarme, alarmeNotas, anotacoesAlarme, soneca,feriado);
             contador++;
         }
-
+localStorage.setItem(contador,JSON.stringify(novoAlarme));
+localStorage.setItem("numeroAlarme",contador);
 
        
 
@@ -177,7 +180,7 @@ onload = () => {
 
         }
         else {
-            document.getElementById("sonecaPlace").style.background = "#C30000";
+            document.getElementById("sonecaPlace").style.background = "#2B5C7C";
             botaoSoneca = 0;
 
         }

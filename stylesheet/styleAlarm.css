@@ -244,5 +244,34 @@ select{
   .slider.round:before {
     border-radius: 50%;
   }
+  #horas{
+    width: 150px;
+    height: 150px;
+    font-size: 100px;
+    left: 100px;
+    background-color: #2B5C7C;
+    border-radius: 25px;
+}
+#minutos{
+    width: 150px;
+    height: 150px;
+    left: 100px;
+    font-size: 100px;
+    background-color: #2B5C7C;
+    border-radius: 25px;
+    
+}
+#doisPontos{
+  font-size: 100px;
+  text-align: left;
+  color:#C30000;
 
+
+}
+#horarioSet{
+    
+    position: relative;
+    left: 275px;
+    
+    
 }
