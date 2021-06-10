@@ -10,8 +10,10 @@ var botaoSoneca = 1;
 var botaoFeriado = 0;
 
 
+
 onload = () => {
     document.querySelector('#botaosalvar').onclick = function () {
+        contador = localStorage.getItem("numeroAlarme");
         alert("alarme salvo com sucesso!");
         let alarmeHoras = 0;
         let alarmeMinutos = 0;
@@ -25,31 +27,28 @@ onload = () => {
         alarmeDias[6] = botaoSab;
         let soneca = document.getElementById("soneca").value;
         let nomeDoAlarme = document.getElementById("nomeAlarme").value;
-        console.log(nomeDoAlarme);
+
         let alarmeNotas = document.getElementById("notasDoAlarmeBox").value;
-        let feriado= botaoFeriado;
+        let feriado = botaoFeriado;
         let anotacoesAlarme = "nada";
         if (contador == 15) {
             alert('Limite de alarme alcançado');
         }
 
         else {
-            var novoAlarme = criarAlarme(alarmeHoras, alarmeMinutos, alarmeDias, nomeDoAlarme, alarmeNotas, anotacoesAlarme, soneca,feriado);
+            var novoAlarme = criarAlarme(alarmeHoras, alarmeMinutos, alarmeDias, nomeDoAlarme, alarmeNotas, anotacoesAlarme, soneca, feriado);
             contador++;
         }
+        localStorage.setItem(contador, JSON.stringify(novoAlarme));
+        localStorage.setItem("numeroAlarme", contador);
 
 
-        console.log(novoAlarme);
-        console.log(contador);
-        console.log(botaoD);
-        let convert = JSON.stringify(novoAlarme);
-        console.log(convert);
 
 
 
     }
 
-    function criarAlarme(chave1, chave2, chave3, chave4, chave5, chave6, chave7,chave8) {
+    function criarAlarme(chave1, chave2, chave3, chave4, chave5, chave6, chave7, chave8) {
         let newAlarme = {
             "horas": chave1,
             "minutos": chave2,
@@ -58,7 +57,7 @@ onload = () => {
             "notas": chave5,
             "anotacoes": chave6,
             "soneca": chave7,
-            "feriado?":chave8,
+            "feriado?": chave8,
         }
         return newAlarme;
     }
@@ -181,7 +180,7 @@ onload = () => {
 
         }
         else {
-            document.getElementById("sonecaPlace").style.background = "#C30000";
+            document.getElementById("sonecaPlace").style.background = "#2B5C7C";
             botaoSoneca = 0;
 
         }
@@ -190,18 +189,12 @@ onload = () => {
         if (botaoFeriado == 0) {
 
             botaoFeriado = 1;
-            console.log(botaoFeriado)
         }
         else {
 
             botaoFeriado = 0;
 
         }
-
-
-
-
-
 
     }
 
