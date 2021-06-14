@@ -28,7 +28,9 @@
 }
 .f1 {
     height: 22px;
-
+}
+.f2{
+    width: 100px;
 }
 .observacao{
     text-align: center;
@@ -59,16 +61,24 @@ h1{
     display: inline;
     text-align: center;
 }
-.imgNova-pasta{
-    width: 50px;
+h3{
+    font-size: 0.8rem;
 }
-.imgNovo-alarme{
-    width: 55px;
-}
-footer{
+.btn-pasta{
+    width: 30px;
     color: #C30000;
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    background-color: white;
+    border-style: none;
+}
+
+/*rodape*/
+
+footer{
+    background-color: #C30000;
+    height: 90px;
+}
+.imgfooter{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
 }
