@@ -1,3 +1,9 @@
+/*
+Problema de rolagem
+body{
+    overflow: hidden;
+}*/
+
 .img1{
     width: 140px;
     float: right;
@@ -28,25 +34,35 @@
 }
 .f1 {
     height: 22px;
+}
+.f2{
+    width: 100px;
+}
 
-}
-.observacao{
-    text-align: center;
-    bottom: 2px;
-    text-align: end;
-    color: white;
-    font-size: 0.7rem;
-}
-.divPrincipal{
-    justify-content: center;
+.areapastas{
     display: flex;
     align-items: flex-end;
-    margin: 20px;
-    padding: 0px;
-    border-radius: 20px;
-    background-color: rgba(43, 92, 124, 0.77);
-    height: 320px;
 }
+
+/*Parte das pasta */
+.Pastas{
+    max-width:94%;
+    background-color: #2B5C7C;
+    margin: 3%;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+iframe{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.Pastas .Texto-info{
+    text-align: center;
+    color: rgb(179, 179, 179);
+}
+
 .div1{
     display: flex;
     justify-content: space-between;
@@ -59,16 +75,24 @@ h1{
     display: inline;
     text-align: center;
 }
-.imgNova-pasta{
-    width: 50px;
+h3{
+    font-size: 0.8rem;
 }
-.imgNovo-alarme{
-    width: 55px;
-}
-footer{
+.btn-pasta{
+    width: 30px;
     color: #C30000;
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    background-color: white;
+    border-style: none;
+}
+
+/*rodape*/
+
+footer{
+    background-color: #C30000;
+    height: 50px;
+}
+.imgfooter{
+    display: block;
+    width: 80px;
+    margin: 0 auto;
 }
