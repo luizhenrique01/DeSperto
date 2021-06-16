@@ -1,0 +1,49 @@
+body{
+    max-width: 100%;
+    background-color: #2B5C7C;
+    margin: 0px;
+    border: 0px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+/*area das pastas*/
+.principal{
+    max-width: 100%;
+    padding-left: 2px;
+}
+
+/*area das pasta - removendo coisas geradas automaticamente */
+ div .container{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Parte das pasta - pastas em si*/
+
+ .pasta4{
+    max-width: 100%;
+    background-color: white;
+    padding: 0px;
+    margin: 5px;
+    border-radius: 4px;
+} 
+
+.pasta4 .img-pasta4{
+    padding: 0px;
+}
+
+.pasta4 .txt-pasta4{
+    padding: 0px;
+}
+
+ .pasta4 img{
+    width: 90px;
+    padding: 0px;
+}
+
+ .pasta4 h3{
+    padding-top: 35px;
+    text-align:justify;
+    color: #C30000;
+}

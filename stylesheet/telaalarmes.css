@@ -1,0 +1,129 @@
+header{
+    background-color: #C30000;
+    height: 60px;
+}
+.logo{
+    margin-top: -15px !important;
+    padding: 0px;
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+}
+.btn-voltar{
+    width: 30px;
+    color: white;
+    background-color: #C30000;
+    border-style: none;
+}
+.icone{
+  font-size:30px;
+}
+.btn-criar{
+    margin-top: 30px;
+    position: relative;
+    width: 30px;
+    color: #C30000;
+    background-color: #ffffff;
+    border-style: none;
+
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    text-align: center;
+    color: #C30000;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    font-size: 20px;
+    color: #C30000;
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+.alarme{
+    margin-top: 15px !important;
+    padding: 10px;
+    margin: 1px;
+    color: white;
+    background-color: #2B5C7C;
+    border-radius: 15px;
+}
+.nota{
+    font-size: 0.8rem;
+}
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+
+h5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 24px;
+  }
+  
+  /* botao vermelho*/
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 10px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #C30000;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #C30000;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    transform: translateX(25px);
+  }
+  
+  
+  .slider.round {
+    border-radius: 30px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+ /* fecha botao vermelho*/
