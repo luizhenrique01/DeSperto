@@ -1,7 +1,7 @@
 onload = () =>{
    
     let alarmeNumero=localStorage.getItem("numeroAlarme");
-    console.log(alarmeNumero);
+  
     if (alarmeNumero==1){ 
         let btn = document.createElement("button");
         var alarmeData1=JSON.parse(localStorage.getItem('1'));
