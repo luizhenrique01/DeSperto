@@ -1,0 +1,155 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    background: #2B5C7C;
+    text-align: center;
+}
+
+.header_area .logo{
+    max-width: 170px;
+    
+}
+
+
+
+
+/*navegação*/
+.menu_area{
+    margin-top: 40px;
+}
+
+.menu_area nav a{
+    color:white;
+    margin-bottom: 10px;
+}
+.menu_area a:hover{
+    color:#2B5C7C;
+    background-color: #ffffff;
+}
+.active{
+    background-color: #ffffff !important;
+    color: #C30000!important;
+}
+
+/*Main*/
+
+/*Apresentação*/
+section .Imagem-principal img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;;
+}
+
+section .texto-principal h1{
+    text-align: center;
+    color: #C30000;
+    padding-bottom: 20px;
+}
+
+section .texto-principal p{
+    font-size:large;
+    text-align:center;
+    color: black;
+}
+
+/*Interface*/
+ .Interface{
+    padding-top: 80px;
+    border-radius: 4px;
+    padding-bottom: 80px;
+    
+}
+
+.Interface h1{
+    text-align: center;
+    color: #C30000;
+    padding-bottom: 20px;
+}
+
+.Interface-principal img{
+    max-width: 75%;
+}
+
+.Interface-secundaria img{
+    max-width: 75%;
+}
+
+.Interface p{
+    font-size:larger;
+    padding-top: 100px;
+    text-align:center;
+    color: black;
+}
+
+.Interface h3{
+    padding-top: 60px;
+    text-align: center;
+    color: #C30000;
+}
+
+/*Funcionalidades*/
+.Funcionalidades{
+    padding-top: 80px;
+    padding-bottom: 80px;    
+}
+
+.Funcionalidades h1{
+    text-align: center;
+    color: #C30000;
+    padding-bottom: 40px;
+}
+
+.Imagem-Funcionalidade img{
+    max-width: 75%;
+}
+
+.Funcionalidades ul{
+    padding-top: 25%;
+}
+
+.Funcionalidades ul li{
+    list-style: none;
+    font-size:larger;
+    padding-top: 20px;
+    text-align:center;
+    color: black;
+}
+
+/*Extra*/
+.Extra p{   
+    font-size:larger;
+    text-align:center;
+    color: #C30000; 
+    padding-bottom: 20px;
+}
+
+.Extra p a{   
+    font-size:medium;
+    text-align:center;
+    color: blue; 
+}
+
+.Extra p a:hover{   
+    font-size:medium;
+    text-align:center;
+    color: rgb(106, 106, 255); 
+}
+
+/*footer*/
+footer{
+    padding:5px;
+    background-color: #C30000;
+}
+
+footer p{
+    text-align: center;
+    color: #ffffff;
+}
+
+
