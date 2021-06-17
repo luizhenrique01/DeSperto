@@ -1,0 +1,87 @@
+body{
+    overflow-x: hidden;
+}
+
+header{
+    background: #2B5C7C;
+    text-align: center;
+}
+
+.header_area .logo{
+    max-width: 170px;
+    
+}
+
+/*navegação*/
+.menu_area{
+    margin-top: 40px;
+}
+
+.menu_area nav a{
+    color:white;
+    margin-bottom: 10px;
+}
+.menu_area a:hover{
+    color:#2B5C7C;
+    background-color: #ffffff;
+}
+.active{
+    background-color: #ffffff !important;
+    color: #C30000!important;
+}
+
+/*main*/
+
+/*Informações do contato*/
+.Info-Contato{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    max-width: 90%;
+    padding: 10px;
+}
+
+/*Imagem Contato*/
+.Info-Contato .Imagem-Contato{
+    border-right:solid 1px #C30000;
+}
+
+.Info-Contato .Imagem-Contato img{
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    max-width: 70%;;
+}
+
+/*Texto Contato*/
+.Info-Contato .texto-Contato{
+    border-left:solid 1px #C30000;
+}
+
+.Info-Contato .texto-Contato h1{
+    color: #C30000;
+}
+
+.Info-Contato .texto-Contato p{
+    text-align: justify;
+    color: #C30000;
+    margin: 7px;
+}
+
+.Info-Contato .texto-Contato p #pag3{
+    padding-left: 40px;
+}
+
+
+/*footer*/
+footer{
+    padding:5px;
+    background-color: #C30000;
+}
+
+footer p{
+    text-align: center;
+    color: #ffffff;
+}
