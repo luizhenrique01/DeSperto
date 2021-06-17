@@ -1,0 +1,26 @@
+header{
+    background-color: #008AD8;
+    height: 60px;
+}
+.logo{
+    margin-top: -15px !important;
+    padding: 0px;
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+}
+.btn-voltar{
+    width: 30px;
+    color: white;
+    background-color: #008AD8;
+    border-style: none;
+}
+.icone{
+    font-size:35px;
+}
+.logo2{
+    width: 80px;
+    padding: 0px;
+    display: block;
+    margin: 0 auto;
+}
