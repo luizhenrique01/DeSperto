@@ -20,8 +20,8 @@
         <div class="col-lg-12">
             <div class="row header fechar">
                 <div class="col-5">
-                    <a href="index.html"><i class="bi bi-x-circle"></i><svg xmlns="http://www.w3.org/2000/svg"
-                            width="30" height="30" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <a href="index.html"><i  class="bi bi-x-circle"></i><svg xmlns="http://www.w3.org/2000/svg"
+                            width="30" id="botaofechar" height="30" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
                             <path
                                 d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="col-7">
-                    <img class="logo" src="img/logo2.png">
+                    <img class="logo" src="img/prt--dp-01-02.png">
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
 
 
                 <div class="col-2 col-sm-2 col-md-2 com-lg-2 col-xl-2"> 
-                    <label class="switch">
+                    <label class="switch" id="botaonome">
                         <input type="checkbox" id="botaoNomeToggle">
                         <span class="slider round"></span>
                     </label>
@@ -55,12 +55,32 @@
 
     </section>
 
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 linharelogio">
+
+                
+                <input type="time" id="Agendamento" required>
+                <button id="botaoDefinir" onclick="alert('Agendado para ' + document.getElementById('Agendamento').value)">Definir</button>
+                <!-- Não precisa criar nenhuma função aqui, o background-mode já está lendo estes valores -->
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </section>
+
     
 
 
     <section class="container">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="row diassemana">
+            <div class="row diassemana bordas">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                     <!--Dias da semana aqui-->
                     <!--
@@ -96,7 +116,7 @@
 
     <section class="container">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="row soneca">
+            <div class="row soneca bordas">
                 <div class="col-10 ">
                     <p class="textos">Soneca</p>
                 </div>
@@ -112,7 +132,7 @@
 
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
 
-            <div class="row temposoneca" id="sonecaPlace">
+            <div class="row temposoneca bordas" id="sonecaPlace">
 
                 <div class="col-12 ">
                     <!--Tempo de soneca e quantas vezes permitidas-->
@@ -134,9 +154,9 @@
 
     <section class="container">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="row temporario">
+            <div class="row temporario bordas">
                 <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-                    <p>Alarme Temporário?</p>
+                    <p class="textos">Alarme Temporário?</p>
                 </div>
 
                 <div class="col-2 col-sm-2 col-md-2 com-lg-2 col-xl-2 botoes">
@@ -166,9 +186,9 @@
 
     <section class="container">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="row temporario">
+            <div class="row temporario bordas">
                 <div class="col-10">
-                    <p>Desativar alarme em feriados?</p>
+                    <p class="textos">Desativar alarme em feriados?</p>
 
                 </div>
 
@@ -190,9 +210,9 @@
 
     <section class="container">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="row somAlarme">
+            <div class="row somAlarme bordas">
                 <div class="col-10 ">
-                    <p>Som do alarme</p>
+                    <p class="textos">Som do alarme</p>
 
                 </div>
 
@@ -209,7 +229,7 @@
         </div>
 
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="row somdoAlarme">
+            <div class="row somdoAlarme bordas">
                 <div class="col-12 ">
 
                     <div class="dropdown">

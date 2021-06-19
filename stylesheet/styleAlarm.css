@@ -100,6 +100,7 @@ border-left-width: 0;
     background-color: #2B5C7C;
     text-align: center;
     
+    
 }
 .diassemana nav > a{
 
@@ -277,7 +278,51 @@ select{
     position: relative;
     left: 275px;
 }
-/*FIM relógio Temporário*/
+FIM relógio Temporário*/
+
+
+
+
+/*Relógio*/
+
+
+
+.input #Agendamento{
+    background-color: #2B5C7C;
+    color: white;
+    height: 50px;
+}
+
+
+
+.linharelogio{
+
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#notasDoAlarmeBox{
+
+    border-radius: 18px;
+}
+
+#botaoDefinir{
+
+    background-color: #2B5C7C;
+    color: white;
+    
+}
+
+
+
+
+
+
+
+
+
+
 
 #dropdownMenuButton{
     background-color: #5C819A;
@@ -291,16 +336,42 @@ select{
 
 @media screen and (max-width:600px){
    
-.botoes{
-    
-}
+
     .switch{
         margin:-30px ;
-        margin-top: 7px;
+        margin-top: 12px;
         
     }
 }
-
+#botaonome{
+    margin-bottom: 20px;
+    margin:-26px ;
+margin-bottom: 10px;
+}
 .textos{
-    margin-top: 7px;
+    margin-top: 11px;
+}
+
+.switch{
+    margin:-30px ;
+    margin-top: 12px;
+    
+}
+
+.bordas{
+    border-radius: 5px;
+}
+.header{
+
+    padding-top: 0;
+    margin-top: 0;
+    background-color:#C30000 ;
+    
+    height: 100%;
+}
+
+#botaofechar{
+
+    margin-top: 10px;
+    color: white;
 }
