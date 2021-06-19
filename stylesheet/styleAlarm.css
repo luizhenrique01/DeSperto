@@ -187,6 +187,8 @@ select{
 
 
 }
+
+/*Relógio temporário?*/
 .switch {
     position: relative;
     display: inline-block;
@@ -274,7 +276,31 @@ select{
     
     position: relative;
     left: 275px;
-    
-    
+}
+/*FIM relógio Temporário*/
 
+#dropdownMenuButton{
+    background-color: #5C819A;
+}
+
+.dropdown-menu{
+    background-color: #5C819A;
+
+}
+
+
+@media screen and (max-width:600px){
+   
+.botoes{
+    
+}
+    .switch{
+        margin:-30px ;
+        margin-top: 7px;
+        
+    }
+}
+
+.textos{
+    margin-top: 7px;
 }
