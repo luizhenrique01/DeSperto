@@ -278,6 +278,7 @@ select{
     position: relative;
     left: 275px;
 }
+
 FIM relógio Temporário*/
 
 
@@ -324,6 +325,7 @@ FIM relógio Temporário*/
 
 
 
+
 #dropdownMenuButton{
     background-color: #5C819A;
 }
@@ -335,8 +337,6 @@ FIM relógio Temporário*/
 
 
 @media screen and (max-width:600px){
-   
-
     .switch{
         margin:-30px ;
         margin-top: 12px;
