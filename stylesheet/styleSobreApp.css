@@ -24,3 +24,45 @@ header{
     display: block;
     margin: 0 auto;
 }
+
+#sobre{
+    text-align: center;
+color:#008AD8;
+font-size: 30px;
+margin-top: 30px;}
+
+#texto{
+    font-size: 18px;
+    text-align: center;
+}
+.rodape{font-size: 14px;
+   color: #A9A9A9;
+
+
+}
+
+@media screen and (min-width:601px) /*and (max-width:980px)*/{
+    #sobre{
+        text-align: center;
+        color:#008AD8;
+        font-size: 60px;
+        margin-top: 30px;
+    }
+     #texto{
+
+            text-align: center;
+            font-size: 30px;
+            }
+
+            .logo2{
+                width: 120px;
+                padding: 0px;
+                display: block;
+                margin: 0 auto;
+                margin-top: 250px;
+            }
+
+            .rodape{font-size: 26px;
+                color: #A9A9A9;
+             
+}
