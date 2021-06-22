@@ -4,6 +4,12 @@ onload=()=>{
           window.location.assign("alarme.html")
           
     }
+    document.getElementById('voltar').onclick=function(){
+        
+          window.location.assign("telaInterna.html")
+          
+    }
+
     var pastaAtual=localStorage.getItem("pastaAtual");
     var abrirPasta=new Array;
     
@@ -14,16 +20,16 @@ onload=()=>{
             break;
             
             case "2":
-                abrirPasta=localStorage.getItem("A2");
+                abrirPasta=JSON.parse(localStorage.getItem("A2"));
                 break;
                 case "3":
-                    abrirPasta=localStorage.getItem("A3");
+                    abrirPasta=JSON.parse(localStorage.getItem("A3"));
                     break;
                     case "4":
-                        abrirPasta=localStorage.getItem("A4");
+                        abrirPasta=JSON.parse(localStorage.getItem("A4"));
                         break;
                         case "5":
-                            abrirPasta=localStorage.getItem("A5");
+                            abrirPasta=JSON.parse(localStorage.getItem("A5"));
                             break;
 
     }
@@ -31,6 +37,9 @@ onload=()=>{
 
     if (abrirPasta[0]==1){ 
         let alarmeData1=abrirPasta
+        let div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes')
         let div1 = document.createElement("div");
         div1.setAttribute('class','row alarme');
         div1.setAttribute('id','1div');
@@ -38,8 +47,9 @@ onload=()=>{
         div2.setAttribute('class','col-8');
         div2.setAttribute('id','2div');
         let h4 = document.createElement("h4");
+       h4.setAttribute('id','click1');
         h4.innerHTML=alarmeData1[1].nome;
-        h4.setAttribute('id','4h');
+       
         let p = document.createElement("p");
         p.innerHTML=alarmeData1[1].notas;
         p.setAttribute('id','1p');
@@ -47,7 +57,7 @@ onload=()=>{
         div3.setAttribute('class','col-4');
         div3.setAttribute('id','3div');
         let h5 = document.createElement("h5");
-        h5.innerHTML=alarmeData1[1].horas+":"+alarmeData1[1].minutos;
+        h5.innerHTML=alarmeData1[1].horas;
         h5.setAttribute('id','5h');
        
         let div4 = document.createElement("div4");
@@ -64,7 +74,7 @@ onload=()=>{
         span.setAttribute('id','span1');
         
         
-        
+            document.getElementById("allAlarmes").append(div0);
             document.getElementById("localDosAlarmes").append(div1);
             document.getElementById("1div").append(div2);
             document.getElementById("2div").append(h4);
@@ -79,8 +89,11 @@ onload=()=>{
         
     
     }
-    /*else if (abrirPasta[0]==2){ 
+    else if (abrirPasta[0]==2){ 
         let alarmeData1=abrirPasta
+        let div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes')
         let div1 = document.createElement("div");
         div1.setAttribute('class','row alarme');
         div1.setAttribute('id','1div');
@@ -89,7 +102,7 @@ onload=()=>{
         div2.setAttribute('id','2div');
         let h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[1].nome;
-        h4.setAttribute('id','4h');
+        h4.setAttribute('id','click1');
         let p = document.createElement("p");
         p.innerHTML=alarmeData1[1].notas;
         p.setAttribute('id','1p');
@@ -97,7 +110,7 @@ onload=()=>{
         div3.setAttribute('class','col-4');
         div3.setAttribute('id','3div');
         let h5 = document.createElement("h5");
-        h5.innerHTML=alarmeData1[1].horas+":"+alarmeData1[1].minutos;
+        h5.innerHTML=alarmeData1[1].horas
         h5.setAttribute('id','5h');
        
         let div4 = document.createElement("div4");
@@ -114,7 +127,7 @@ onload=()=>{
         span.setAttribute('id','span1');
         
         
-        
+        document.getElementById("allAlarmes").append(div0);
             document.getElementById("localDosAlarmes").append(div1);
             document.getElementById("1div").append(div2);
             document.getElementById("2div").append(h4);
@@ -126,56 +139,61 @@ onload=()=>{
             document.getElementById("label1").append(input);
             document.getElementById("label1").append(span);
 
-            
+            div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes2')
          div1 = document.createElement("div");
         div1.setAttribute('class','row alarme');
-        div1.setAttribute('id','1div');
+        div1.setAttribute('id','1div2');
          div2 = document.createElement("div");
         div2.setAttribute('class','col-8');
-        div2.setAttribute('id','2div');
+        div2.setAttribute('id','2div2');
          h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[2].nome;
-        h4.setAttribute('id','4h');
+        h4.setAttribute('id','click2');
          p = document.createElement("p");
         p.innerHTML=alarmeData1[2].notas;
-        p.setAttribute('id','1p');
+        p.setAttribute('id','1p2');
          div3 = document.createElement("div");
         div3.setAttribute('class','col-4');
-        div3.setAttribute('id','3div');
+        div3.setAttribute('id','3div2');
          h5 = document.createElement("h5");
-        h5.innerHTML=alarmeData1[2].horas+":"+alarmeData1[2].minutos;
-        h5.setAttribute('id','5h');
+        h5.innerHTML=alarmeData1[2].horas
+        h5.setAttribute('id','5h2');
        
          div4 = document.createElement("div4");
         div4.setAttribute('class','row alarme');
-        div4.setAttribute('id','4div');
+        div4.setAttribute('id','4div2');
          label = document.createElement("label");
         label.setAttribute('class','switch');
-        label.setAttribute('id','label1');
+        label.setAttribute('id','label12');
          input = document.createElement("input");
         input.setAttribute('type','checkbox');
-        input.setAttribute('id','input');
-         span = document.createElement("span");
+        input.setAttribute('id','input2');
+         span = document.createElement('span');
         span.setAttribute('class','slider round');
-        span.setAttribute('id','span1');
+        span.setAttribute('id','span12');
         
         
-        
-            document.getElementById("localDosAlarmes").append(div1);
-            document.getElementById("1div").append(div2);
-            document.getElementById("2div").append(h4);
-            document.getElementById("2div").append(p);
-            document.getElementById("1div").append(div3);
-            document.getElementById("3div").append(h5);
-            document.getElementById("3div").append(div4);
-            document.getElementById("4div").append(label);
-            document.getElementById("label1").append(input);
-            document.getElementById("label1").append(span);
+        document.getElementById("allAlarmes").append(div0);
+            document.getElementById("localDosAlarmes2").append(div1);
+            document.getElementById("1div2").append(div2);
+            document.getElementById("2div2").append(h4);
+            document.getElementById("2div2").append(p);
+            document.getElementById("1div2").append(div3);
+            document.getElementById("3div2").append(h5);
+            document.getElementById("3div2").append(div4);
+            document.getElementById("4div2").append(label);
+            document.getElementById("label12").append(input);
+            document.getElementById("label12").append(span);
         
         
     
     }
     else if (abrirPasta[0]==3){ 
+        let div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes')
         let alarmeData1=abrirPasta
         let div1 = document.createElement("div");
         div1.setAttribute('class','row alarme');
@@ -185,7 +203,7 @@ onload=()=>{
         div2.setAttribute('id','2div');
         let h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[1].nome;
-        h4.setAttribute('id','4h');
+        h4.setAttribute('id','click1');
         let p = document.createElement("p");
         p.innerHTML=alarmeData1[1].notas;
         p.setAttribute('id','1p');
@@ -193,7 +211,155 @@ onload=()=>{
         div3.setAttribute('class','col-4');
         div3.setAttribute('id','3div');
         let h5 = document.createElement("h5");
-        h5.innerHTML=alarmeData1[1].horas+":"+alarmeData1[1].minutos;
+        h5.innerHTML=alarmeData1[1].horas
+        h5.setAttribute('id','5h');
+       
+        let div4 = document.createElement("div4");
+        div4.setAttribute('class','row alarme');
+        div4.setAttribute('id','4div');
+        let label = document.createElement("label");
+        label.setAttribute('class','switch');
+        label.setAttribute('id','label1');
+        let input = document.createElement("input");
+        input.setAttribute('type','checkbox');
+        input.setAttribute('id','input');
+        let span = document.createElement("span");
+        span.setAttribute('class','slider round');
+        span.setAttribute('id','span1');
+        
+        document.getElementById("allAlarmes").append(div0);
+        
+            document.getElementById("localDosAlarmes").append(div1);
+            document.getElementById("1div").append(div2);
+            document.getElementById("2div").append(h4);
+            document.getElementById("2div").append(p);
+            document.getElementById("1div").append(div3);
+            document.getElementById("3div").append(h5);
+            document.getElementById("3div").append(div4);
+            document.getElementById("4div").append(label);
+            document.getElementById("label1").append(input);
+            document.getElementById("label1").append(span);
+
+            div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes2')
+         div1 = document.createElement("div");
+        div1.setAttribute('class','row alarme');
+        div1.setAttribute('id','1div2');
+         div2 = document.createElement("div");
+        div2.setAttribute('class','col-8');
+        div2.setAttribute('id','2div2');
+         h4 = document.createElement("h4");
+        h4.innerHTML=alarmeData1[2].nome;
+        h4.setAttribute('id','click2');
+         p = document.createElement("p");
+        p.innerHTML=alarmeData1[2].notas;
+        p.setAttribute('id','1p2');
+         div3 = document.createElement("div");
+        div3.setAttribute('class','col-4');
+        div3.setAttribute('id','3div2');
+         h5 = document.createElement("h5");
+        h5.innerHTML=alarmeData1[2].horas
+        h5.setAttribute('id','5h2');
+       
+         div4 = document.createElement("div4");
+        div4.setAttribute('class','row alarme');
+        div4.setAttribute('id','4div2');
+         label = document.createElement("label");
+        label.setAttribute('class','switch');
+        label.setAttribute('id','label12');
+         input = document.createElement("input");
+        input.setAttribute('type','checkbox');
+        input.setAttribute('id','input2');
+         span = document.createElement("span");
+        span.setAttribute('class','slider round');
+        span.setAttribute('id','span12');
+        
+        
+        document.getElementById("allAlarmes").append(div0);
+            document.getElementById("localDosAlarmes2").append(div1);
+            document.getElementById("1div2").append(div2);
+            document.getElementById("2div2").append(h4);
+            document.getElementById("2div2").append(p);
+            document.getElementById("1div2").append(div3);
+            document.getElementById("3div2").append(h5);
+            document.getElementById("3div2").append(div4);
+            document.getElementById("4div2").append(label);
+            document.getElementById("label12").append(input);
+            document.getElementById("label12").append(span);
+            div0=document.createElement("div0")
+            div0.setAttribute('class','container')
+            div0.setAttribute('id','localDosAlarmes3')
+            div1 = document.createElement("div");
+            div1.setAttribute('class','row alarme');
+            div1.setAttribute('id','1div3');
+             div2 = document.createElement("div");
+            div2.setAttribute('class','col-8');
+            div2.setAttribute('id','2div3');
+             h4 = document.createElement("h4");
+            h4.innerHTML=alarmeData1[3].nome;
+            h4.setAttribute('id','click3');
+             p = document.createElement("p");
+            p.innerHTML=alarmeData1[3].notas;
+            p.setAttribute('id','1p3');
+             div3 = document.createElement("div");
+            div3.setAttribute('class','col-4');
+            div3.setAttribute('id','3div3');
+             h5 = document.createElement("h5");
+            h5.innerHTML=alarmeData1[3].horas
+            h5.setAttribute('id','5h3');
+           
+             div4 = document.createElement("div4");
+            div4.setAttribute('class','row alarme');
+            div4.setAttribute('id','4div3');
+             label = document.createElement("label");
+            label.setAttribute('class','switch');
+            label.setAttribute('id','label13');
+             input = document.createElement("input");
+            input.setAttribute('type','checkbox');
+            input.setAttribute('id','input3');
+             span = document.createElement("span");
+            span.setAttribute('class','slider round');
+            span.setAttribute('id','span13');
+            
+            
+            document.getElementById("allAlarmes").append(div0);
+                document.getElementById("localDosAlarmes3").append(div1);
+                document.getElementById("1div3").append(div2);
+                document.getElementById("2div3").append(h4);
+                document.getElementById("2div3").append(p);
+                document.getElementById("1div3").append(div3);
+                document.getElementById("3div3").append(h5);
+                document.getElementById("3div3").append(div4);
+                document.getElementById("4div3").append(label);
+                document.getElementById("label13").append(input);
+                document.getElementById("label13").append(span);
+        
+        
+    
+    }
+    else if (abrirPasta[0]==4){ 
+        let div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes')
+        let alarmeData1=abrirPasta
+        let div1 = document.createElement("div");
+        div1.setAttribute('class','row alarme');
+        div1.setAttribute('id','1div');
+        let div2 = document.createElement("div");
+        div2.setAttribute('class','col-8');
+        div2.setAttribute('id','2div');
+        let h4 = document.createElement("h4");
+        h4.innerHTML=alarmeData1[1].nome;
+        h4.setAttribute('id','click1');
+        let p = document.createElement("p");
+        p.innerHTML=alarmeData1[1].notas;
+        p.setAttribute('id','1p');
+        let div3 = document.createElement("div");
+        div3.setAttribute('class','col-4');
+        div3.setAttribute('id','3div');
+        let h5 = document.createElement("h5");
+        h5.innerHTML=alarmeData1[1].horas
         h5.setAttribute('id','5h');
        
         let div4 = document.createElement("div4");
@@ -210,7 +376,7 @@ onload=()=>{
         span.setAttribute('id','span1');
         
         
-        
+        document.getElementById("allAlarmes").append(div0);
             document.getElementById("localDosAlarmes").append(div1);
             document.getElementById("1div").append(div2);
             document.getElementById("2div").append(h4);
@@ -222,7 +388,9 @@ onload=()=>{
             document.getElementById("label1").append(input);
             document.getElementById("label1").append(span);
 
-            
+            div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes')
          div1 = document.createElement("div");
         div1.setAttribute('class','row alarme');
         div1.setAttribute('id','1div');
@@ -231,7 +399,7 @@ onload=()=>{
         div2.setAttribute('id','2div');
          h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[2].nome;
-        h4.setAttribute('id','4h');
+        h4.setAttribute('id','click2');
          p = document.createElement("p");
         p.innerHTML=alarmeData1[2].notas;
         p.setAttribute('id','1p');
@@ -239,7 +407,7 @@ onload=()=>{
         div3.setAttribute('class','col-4');
         div3.setAttribute('id','3div');
          h5 = document.createElement("h5");
-        h5.innerHTML=alarmeData1[2].horas+":"+alarmeData1[2].minutos;
+        h5.innerHTML=alarmeData1[2].horas
         h5.setAttribute('id','5h');
        
          div4 = document.createElement("div4");
@@ -256,7 +424,7 @@ onload=()=>{
         span.setAttribute('id','span1');
         
         
-        
+        document.getElementById("allAlarmes").append(div0);
             document.getElementById("localDosAlarmes").append(div1);
             document.getElementById("1div").append(div2);
             document.getElementById("2div").append(h4);
@@ -267,7 +435,9 @@ onload=()=>{
             document.getElementById("4div").append(label);
             document.getElementById("label1").append(input);
             document.getElementById("label1").append(span);
-
+            div0=document.createElement("div0")
+            div0.setAttribute('class','container')
+            div0.setAttribute('id','localDosAlarmes')
             div1 = document.createElement("div");
             div1.setAttribute('class','row alarme');
             div1.setAttribute('id','1div');
@@ -276,7 +446,7 @@ onload=()=>{
             div2.setAttribute('id','2div');
              h4 = document.createElement("h4");
             h4.innerHTML=alarmeData1[3].nome;
-            h4.setAttribute('id','4h');
+            h4.setAttribute('id','click3');
              p = document.createElement("p");
             p.innerHTML=alarmeData1[3].notas;
             p.setAttribute('id','1p');
@@ -284,7 +454,7 @@ onload=()=>{
             div3.setAttribute('class','col-4');
             div3.setAttribute('id','3div');
              h5 = document.createElement("h5");
-            h5.innerHTML=alarmeData1[3].horas+":"+alarmeData1[3].minutos;
+            h5.innerHTML=alarmeData1[3].horas
             h5.setAttribute('id','5h');
            
              div4 = document.createElement("div4");
@@ -301,7 +471,54 @@ onload=()=>{
             span.setAttribute('id','span1');
             
             
+            document.getElementById("allAlarmes").append(div0);
+                document.getElementById("localDosAlarmes").append(div1);
+                document.getElementById("1div").append(div2);
+                document.getElementById("2div").append(h4);
+                document.getElementById("2div").append(p);
+                document.getElementById("1div").append(div3);
+                document.getElementById("3div").append(h5);
+                document.getElementById("3div").append(div4);
+                document.getElementById("4div").append(label);
+                document.getElementById("label1").append(input);
+                document.getElementById("label1").append(span);
+                div1 = document.createElement("div");
+                div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes')
+            div1.setAttribute('class','row alarme');
+            div1.setAttribute('id','1div');
+             div2 = document.createElement("div");
+            div2.setAttribute('class','col-8');
+            div2.setAttribute('id','2div');
+             h4 = document.createElement("h4");
+            h4.innerHTML=alarmeData1[4].nome;
+            h4.setAttribute('id','click4');
+             p = document.createElement("p");
+            p.innerHTML=alarmeData1[4].notas;
+            p.setAttribute('id','1p');
+             div3 = document.createElement("div");
+            div3.setAttribute('class','col-4');
+            div3.setAttribute('id','3div');
+             h5 = document.createElement("h5");
+            h5.innerHTML=alarmeData1[4].horas
+            h5.setAttribute('id','5h');
+           
+             div4 = document.createElement("div4");
+            div4.setAttribute('class','row alarme');
+            div4.setAttribute('id','4div');
+             label = document.createElement("label");
+            label.setAttribute('class','switch');
+            label.setAttribute('id','label1');
+             input = document.createElement("input");
+            input.setAttribute('type','checkbox');
+            input.setAttribute('id','input');
+             span = document.createElement("span");
+            span.setAttribute('class','slider round');
+            span.setAttribute('id','span1');
             
+            
+            document.getElementById("allAlarmes").append(div0);
                 document.getElementById("localDosAlarmes").append(div1);
                 document.getElementById("1div").append(div2);
                 document.getElementById("2div").append(h4);
@@ -316,7 +533,10 @@ onload=()=>{
         
     
     }
-    else if (abrirPasta[0]==4){ 
+    else if (abrirPasta[0]==5){ 
+        let div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes')
         let alarmeData1=abrirPasta
         let div1 = document.createElement("div");
         div1.setAttribute('class','row alarme');
@@ -326,7 +546,7 @@ onload=()=>{
         div2.setAttribute('id','2div');
         let h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[1].nome;
-        h4.setAttribute('id','4h');
+        h4.setAttribute('id','click1');
         let p = document.createElement("p");
         p.innerHTML=alarmeData1[1].notas;
         p.setAttribute('id','1p');
@@ -334,7 +554,7 @@ onload=()=>{
         div3.setAttribute('class','col-4');
         div3.setAttribute('id','3div');
         let h5 = document.createElement("h5");
-        h5.innerHTML=alarmeData1[1].horas+":"+alarmeData1[1].minutos;
+        h5.innerHTML=alarmeData1[1].horas
         h5.setAttribute('id','5h');
        
         let div4 = document.createElement("div4");
@@ -351,7 +571,7 @@ onload=()=>{
         span.setAttribute('id','span1');
         
         
-        
+        document.getElementById("allAlarmes").append(div0);
             document.getElementById("localDosAlarmes").append(div1);
             document.getElementById("1div").append(div2);
             document.getElementById("2div").append(h4);
@@ -363,7 +583,9 @@ onload=()=>{
             document.getElementById("label1").append(input);
             document.getElementById("label1").append(span);
 
-            
+            div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes')
          div1 = document.createElement("div");
         div1.setAttribute('class','row alarme');
         div1.setAttribute('id','1div');
@@ -372,7 +594,7 @@ onload=()=>{
         div2.setAttribute('id','2div');
          h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[2].nome;
-        h4.setAttribute('id','4h');
+        h4.setAttribute('id','click2');
          p = document.createElement("p");
         p.innerHTML=alarmeData1[2].notas;
         p.setAttribute('id','1p');
@@ -380,7 +602,7 @@ onload=()=>{
         div3.setAttribute('class','col-4');
         div3.setAttribute('id','3div');
          h5 = document.createElement("h5");
-        h5.innerHTML=alarmeData1[2].horas+":"+alarmeData1[2].minutos;
+        h5.innerHTML=alarmeData1[2].horas
         h5.setAttribute('id','5h');
        
          div4 = document.createElement("div4");
@@ -397,7 +619,7 @@ onload=()=>{
         span.setAttribute('id','span1');
         
         
-        
+        document.getElementById("allAlarmes").append(div0);
             document.getElementById("localDosAlarmes").append(div1);
             document.getElementById("1div").append(div2);
             document.getElementById("2div").append(h4);
@@ -408,7 +630,9 @@ onload=()=>{
             document.getElementById("4div").append(label);
             document.getElementById("label1").append(input);
             document.getElementById("label1").append(span);
-
+            div0=document.createElement("div0")
+            div0.setAttribute('class','container')
+            div0.setAttribute('id','localDosAlarmes')
             div1 = document.createElement("div");
             div1.setAttribute('class','row alarme');
             div1.setAttribute('id','1div');
@@ -417,7 +641,7 @@ onload=()=>{
             div2.setAttribute('id','2div');
              h4 = document.createElement("h4");
             h4.innerHTML=alarmeData1[3].nome;
-            h4.setAttribute('id','4h');
+            h4.setAttribute('id','click3');
              p = document.createElement("p");
             p.innerHTML=alarmeData1[3].notas;
             p.setAttribute('id','1p');
@@ -425,7 +649,7 @@ onload=()=>{
             div3.setAttribute('class','col-4');
             div3.setAttribute('id','3div');
              h5 = document.createElement("h5");
-            h5.innerHTML=alarmeData1[3].horas+":"+alarmeData1[3].minutos;
+            h5.innerHTML=alarmeData1[3].horas
             h5.setAttribute('id','5h');
            
              div4 = document.createElement("div4");
@@ -442,7 +666,7 @@ onload=()=>{
             span.setAttribute('id','span1');
             
             
-            
+            document.getElementById("allAlarmes").append(div0);
                 document.getElementById("localDosAlarmes").append(div1);
                 document.getElementById("1div").append(div2);
                 document.getElementById("2div").append(h4);
@@ -454,6 +678,9 @@ onload=()=>{
                 document.getElementById("label1").append(input);
                 document.getElementById("label1").append(span);
                 div1 = document.createElement("div");
+                div0=document.createElement("div0")
+        div0.setAttribute('class','container')
+        div0.setAttribute('id','localDosAlarmes')
             div1.setAttribute('class','row alarme');
             div1.setAttribute('id','1div');
              div2 = document.createElement("div");
@@ -461,7 +688,7 @@ onload=()=>{
             div2.setAttribute('id','2div');
              h4 = document.createElement("h4");
             h4.innerHTML=alarmeData1[4].nome;
-            h4.setAttribute('id','4h');
+            h4.setAttribute('id','click5');
              p = document.createElement("p");
             p.innerHTML=alarmeData1[4].notas;
             p.setAttribute('id','1p');
@@ -469,7 +696,7 @@ onload=()=>{
             div3.setAttribute('class','col-4');
             div3.setAttribute('id','3div');
              h5 = document.createElement("h5");
-            h5.innerHTML=alarmeData1[4].horas+":"+alarmeData1[4].minutos;
+            h5.innerHTML=alarmeData1[4].horas
             h5.setAttribute('id','5h');
            
              div4 = document.createElement("div4");
@@ -486,7 +713,7 @@ onload=()=>{
             span.setAttribute('id','span1');
             
             
-            
+            document.getElementById("allAlarmes").append(div0);
                 document.getElementById("localDosAlarmes").append(div1);
                 document.getElementById("1div").append(div2);
                 document.getElementById("2div").append(h4);
@@ -497,192 +724,9 @@ onload=()=>{
                 document.getElementById("4div").append(label);
                 document.getElementById("label1").append(input);
                 document.getElementById("label1").append(span);
-        
-        
-    
-    }
-    else if (abrirPasta[0]==4){ 
-        let alarmeData1=abrirPasta
-        let div1 = document.createElement("div");
-        div1.setAttribute('class','row alarme');
-        div1.setAttribute('id','1div');
-        let div2 = document.createElement("div");
-        div2.setAttribute('class','col-8');
-        div2.setAttribute('id','2div');
-        let h4 = document.createElement("h4");
-        h4.innerHTML=alarmeData1[1].nome;
-        h4.setAttribute('id','4h');
-        let p = document.createElement("p");
-        p.innerHTML=alarmeData1[1].notas;
-        p.setAttribute('id','1p');
-        let div3 = document.createElement("div");
-        div3.setAttribute('class','col-4');
-        div3.setAttribute('id','3div');
-        let h5 = document.createElement("h5");
-        h5.innerHTML=alarmeData1[1].horas+":"+alarmeData1[1].minutos;
-        h5.setAttribute('id','5h');
-       
-        let div4 = document.createElement("div4");
-        div4.setAttribute('class','row alarme');
-        div4.setAttribute('id','4div');
-        let label = document.createElement("label");
-        label.setAttribute('class','switch');
-        label.setAttribute('id','label1');
-        let input = document.createElement("input");
-        input.setAttribute('type','checkbox');
-        input.setAttribute('id','input');
-        let span = document.createElement("span");
-        span.setAttribute('class','slider round');
-        span.setAttribute('id','span1');
-        
-        
-        
-            document.getElementById("localDosAlarmes").append(div1);
-            document.getElementById("1div").append(div2);
-            document.getElementById("2div").append(h4);
-            document.getElementById("2div").append(p);
-            document.getElementById("1div").append(div3);
-            document.getElementById("3div").append(h5);
-            document.getElementById("3div").append(div4);
-            document.getElementById("4div").append(label);
-            document.getElementById("label1").append(input);
-            document.getElementById("label1").append(span);
-
-            
-         div1 = document.createElement("div");
-        div1.setAttribute('class','row alarme');
-        div1.setAttribute('id','1div');
-         div2 = document.createElement("div");
-        div2.setAttribute('class','col-8');
-        div2.setAttribute('id','2div');
-         h4 = document.createElement("h4");
-        h4.innerHTML=alarmeData1[2].nome;
-        h4.setAttribute('id','4h');
-         p = document.createElement("p");
-        p.innerHTML=alarmeData1[2].notas;
-        p.setAttribute('id','1p');
-         div3 = document.createElement("div");
-        div3.setAttribute('class','col-4');
-        div3.setAttribute('id','3div');
-         h5 = document.createElement("h5");
-        h5.innerHTML=alarmeData1[2].horas+":"+alarmeData1[2].minutos;
-        h5.setAttribute('id','5h');
-       
-         div4 = document.createElement("div4");
-        div4.setAttribute('class','row alarme');
-        div4.setAttribute('id','4div');
-         label = document.createElement("label");
-        label.setAttribute('class','switch');
-        label.setAttribute('id','label1');
-         input = document.createElement("input");
-        input.setAttribute('type','checkbox');
-        input.setAttribute('id','input');
-         span = document.createElement("span");
-        span.setAttribute('class','slider round');
-        span.setAttribute('id','span1');
-        
-        
-        
-            document.getElementById("localDosAlarmes").append(div1);
-            document.getElementById("1div").append(div2);
-            document.getElementById("2div").append(h4);
-            document.getElementById("2div").append(p);
-            document.getElementById("1div").append(div3);
-            document.getElementById("3div").append(h5);
-            document.getElementById("3div").append(div4);
-            document.getElementById("4div").append(label);
-            document.getElementById("label1").append(input);
-            document.getElementById("label1").append(span);
-
-            div1 = document.createElement("div");
-            div1.setAttribute('class','row alarme');
-            div1.setAttribute('id','1div');
-             div2 = document.createElement("div");
-            div2.setAttribute('class','col-8');
-            div2.setAttribute('id','2div');
-             h4 = document.createElement("h4");
-            h4.innerHTML=alarmeData1[3].nome;
-            h4.setAttribute('id','4h');
-             p = document.createElement("p");
-            p.innerHTML=alarmeData1[3].notas;
-            p.setAttribute('id','1p');
-             div3 = document.createElement("div");
-            div3.setAttribute('class','col-4');
-            div3.setAttribute('id','3div');
-             h5 = document.createElement("h5");
-            h5.innerHTML=alarmeData1[3].horas+":"+alarmeData1[3].minutos;
-            h5.setAttribute('id','5h');
-           
-             div4 = document.createElement("div4");
-            div4.setAttribute('class','row alarme');
-            div4.setAttribute('id','4div');
-             label = document.createElement("label");
-            label.setAttribute('class','switch');
-            label.setAttribute('id','label1');
-             input = document.createElement("input");
-            input.setAttribute('type','checkbox');
-            input.setAttribute('id','input');
-             span = document.createElement("span");
-            span.setAttribute('class','slider round');
-            span.setAttribute('id','span1');
-            
-            
-            
-                document.getElementById("localDosAlarmes").append(div1);
-                document.getElementById("1div").append(div2);
-                document.getElementById("2div").append(h4);
-                document.getElementById("2div").append(p);
-                document.getElementById("1div").append(div3);
-                document.getElementById("3div").append(h5);
-                document.getElementById("3div").append(div4);
-                document.getElementById("4div").append(label);
-                document.getElementById("label1").append(input);
-                document.getElementById("label1").append(span);
-                div1 = document.createElement("div");
-            div1.setAttribute('class','row alarme');
-            div1.setAttribute('id','1div');
-             div2 = document.createElement("div");
-            div2.setAttribute('class','col-8');
-            div2.setAttribute('id','2div');
-             h4 = document.createElement("h4");
-            h4.innerHTML=alarmeData1[4].nome;
-            h4.setAttribute('id','4h');
-             p = document.createElement("p");
-            p.innerHTML=alarmeData1[4].notas;
-            p.setAttribute('id','1p');
-             div3 = document.createElement("div");
-            div3.setAttribute('class','col-4');
-            div3.setAttribute('id','3div');
-             h5 = document.createElement("h5");
-            h5.innerHTML=alarmeData1[4].horas+":"+alarmeData1[4].minutos;
-            h5.setAttribute('id','5h');
-           
-             div4 = document.createElement("div4");
-            div4.setAttribute('class','row alarme');
-            div4.setAttribute('id','4div');
-             label = document.createElement("label");
-            label.setAttribute('class','switch');
-            label.setAttribute('id','label1');
-             input = document.createElement("input");
-            input.setAttribute('type','checkbox');
-            input.setAttribute('id','input');
-             span = document.createElement("span");
-            span.setAttribute('class','slider round');
-            span.setAttribute('id','span1');
-            
-            
-            
-                document.getElementById("localDosAlarmes").append(div1);
-                document.getElementById("1div").append(div2);
-                document.getElementById("2div").append(h4);
-                document.getElementById("2div").append(p);
-                document.getElementById("1div").append(div3);
-                document.getElementById("3div").append(h5);
-                document.getElementById("3div").append(div4);
-                document.getElementById("4div").append(label);
-                document.getElementById("label1").append(input);
-                document.getElementById("label1").append(span);
-        
+                div0=document.createElement("div0")
+                div0.setAttribute('class','container')
+                div0.setAttribute('id','localDosAlarmes')
                 div1.setAttribute('class','row alarme');
                 div1.setAttribute('id','1div');
                  div2 = document.createElement("div");
@@ -690,7 +734,7 @@ onload=()=>{
                 div2.setAttribute('id','2div');
                  h4 = document.createElement("h4");
                 h4.innerHTML=alarmeData1[5].nome;
-                h4.setAttribute('id','4h');
+                h4.setAttribute('id','click5');
                  p = document.createElement("p");
                 p.innerHTML=alarmeData1[5].notas;
                 p.setAttribute('id','1p');
@@ -698,7 +742,7 @@ onload=()=>{
                 div3.setAttribute('class','col-4');
                 div3.setAttribute('id','3div');
                  h5 = document.createElement("h5");
-                h5.innerHTML=alarmeData1[5].horas+":"+alarmeData1[5].minutos;
+                h5.innerHTML=alarmeData1[5].horas
                 h5.setAttribute('id','5h');
                
                  div4 = document.createElement("div4");
@@ -715,7 +759,7 @@ onload=()=>{
                 span.setAttribute('id','span1');
                 
                 
-                
+                document.getElementById("allAlarmes").append(div0);
                     document.getElementById("localDosAlarmes").append(div1);
                     document.getElementById("1div").append(div2);
                     document.getElementById("2div").append(h4);
@@ -728,8 +772,32 @@ onload=()=>{
                     document.getElementById("label1").append(span);
     
     }
+     document.getElementById('click1').onclick=function(){
+        localStorage.setItem("alarmeSelecao",1);
+          window.location.assign("alarme.html")
+          
+    }
+    document.getElementById('click2').onclick=function(){
+        localStorage.setItem("alarmeSelecao",2);
+          window.location.assign("alarme.html")
+          
+    }
+    document.getElementById('click3').onclick=function(){
+        localStorage.setItem("alarmeSelecao",3);
+          window.location.assign("alarme.html")
+          
+    }
+    document.getElementById('click4').onclick=function(){
+        localStorage.setItem("alarmeSelecao",4);
+          window.location.assign("alarme.html")
+          
+    }
+    document.getElementById('click5').onclick=function(){
+        localStorage.setItem("alarmeSelecao",5);
+          window.location.assign("alarme.html")
+          
+    }
     
-    */
     
     var alarmeQt=abrirPasta[0];
     
