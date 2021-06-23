@@ -20,7 +20,7 @@ onload =()=>{
 
 document.getElementById('pastaSalvar').onclick = function (){
     alert("Pasta Salva com Sucesso");
-    newAlarme.pasta=document.getElementById('nomePasta').value;
+    newAlarme=document.getElementById('nomePasta').value;
      pastaNumero++;
     var pasta=new Array;
     var pastaNome="A"+pastaNumero;
