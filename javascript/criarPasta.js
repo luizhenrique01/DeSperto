@@ -17,9 +17,6 @@ document.getElementById('pastaSalvar').onclick = function (){
     var pastaNome="A"+pastaNumero;
     pasta[0]=0
     
-    
-    
-   
     localStorage.setItem(pastaNumero, JSON.stringify(newAlarme));
     localStorage.setItem("pastaNumero",pastaNumero);
     localStorage.setItem(pastaNome,JSON.stringify(pasta));

@@ -13,7 +13,6 @@ var som=0;
 var alarmeDias = new Array();
 var soneca
 var nomeDoAlarme
-
 var alarmeNotas
 var feriado
 var anotacoesAlarme
@@ -45,7 +44,7 @@ onload = () => {
             botaoFeriado = pegar[1].feriado
             document.getElementById("soneca").value = pegar[1].soneca
             document.getElementById("notasDoAlarmeBox").value = pegar[1].notas
-            console.log(pegar[1].som)
+            
             switch(pegar[1].som){
                 case 1:
                     document.getElementById("dropdownMenuButton").innerHTML="som1";
@@ -253,12 +252,12 @@ onload = () => {
             novoAlarme[primeiro] = criarAlarme(alarmeHoras,som, alarmeDias, nomeDoAlarme, alarmeNotas, soneca, feriado, botaoSoneca,);
 alarmeSelecao++
             novoAlarme[0] = primeiro;
+
         }
         else {
             novoAlarme[primeiro] = criarAlarme(alarmeHoras,som,  alarmeDias, nomeDoAlarme, alarmeNotas, soneca, feriado, botaoSoneca,);
         }
-
-        localStorage.setItem("A"+alarmeSelecao, JSON.stringify(novoAlarme));
+        localStorage.setItem("A"+pastaAtual, JSON.stringify(novoAlarme));
 
         alert("alarme salvo com sucesso!");
         window.location.assign("telaAlarmes.html")
