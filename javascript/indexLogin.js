@@ -48,7 +48,7 @@ function Login() {
                     toast: true,
                     position: 'top-end',
                     showConfirmButton: false,
-                    timer: 3000,
+                    timer: 5000,
                     timerProgressBar: true,
                     onOpen: (toast) => {
                         toast.addEventListener('mouseenter', Swal.stopTimer)
@@ -60,7 +60,7 @@ function Login() {
                     icon: 'success',
                     title: `Bem vindo, ${usuariosGravados[usuarioIndex].nomeUsuario} !`
                 });
-                window.location.href = 'alarme.html';
+                window.location.href = 'telaInterna.html';
 
             }
         }

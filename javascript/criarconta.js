@@ -9,7 +9,7 @@ function CriarConta() {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Ta de sacanagem? nem um campozinho meu parceiro? ',
+            text: 'Ta de sacanagem? nem um campozinho meu parceiro?',
         })
     } else if (nomeUsuario == '') {
         document.getElementById('nomeUsuario').focus();
@@ -39,6 +39,20 @@ function CriarConta() {
             title: 'Oops...',
             text: 'Campo Confirmar senha vazio',
         })
+    } else if (senhaUsuario !== confirmarSenha) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'As senhanão se coincidem ',
+        })
+    } else if (!validateEmail(emailUsuario)) { //validation @ function regex
+        document.getElementById('emailUsuario').focus();
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'O email não e valido',
+        })
+
     } else {
         const usuario = { id: Date.now(), permission: 'true', nomeUsuario, emailUsuario, senhaUsuario }
         let usuarioGravado = JSON.parse(localStorage.getItem("usuarios"));
@@ -76,7 +90,7 @@ function CriarConta() {
                     icon: 'success',
                     title: 'Cadastrado com sucesso!',
                     showConfirmButton: false,
-                    timer: 1500
+                    timer: 3000
                 });
                 usuarioGravado.push(usuario); //adiciona um novo usuario no array
                 localStorage.setItem('usuarios', JSON.stringify(usuarioGravado)); //grava no local storage  
@@ -87,4 +101,10 @@ function CriarConta() {
             }
         }
     }
+
+    function validateEmail(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
 }

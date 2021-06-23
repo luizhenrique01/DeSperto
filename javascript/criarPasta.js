@@ -3,8 +3,7 @@ pastaNumero=localStorage.getItem("pastaNumero");
 
 onload =()=>{
 
-    
-    
+
     let newAlarme = {
         "horas": 0,
         "minutos": 0,
@@ -26,13 +25,10 @@ document.getElementById('pastaSalvar').onclick = function (){
     var pasta=new Array;
     var pastaNome="A"+pastaNumero;
     pasta[0]=0
-    
-    
-    
-   
+
     localStorage.setItem(pastaNumero, JSON.stringify(newAlarme));
     localStorage.setItem("pastaNumero",pastaNumero);
     localStorage.setItem(pastaNome,JSON.stringify(pasta));
-   window.location.assign( "telaInterna.html");
+     window.location.assign( "telaInterna.html");
 }
 }
