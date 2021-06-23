@@ -257,7 +257,8 @@ alarmeSelecao++
         else {
             novoAlarme[primeiro] = criarAlarme(alarmeHoras,som,  alarmeDias, nomeDoAlarme, alarmeNotas, soneca, feriado, botaoSoneca,);
         }
-        localStorage.setItem("A"+pastaAtual, JSON.stringify(novoAlarme));
+
+        localStorage.setItem("A"+alarmeSelecao, JSON.stringify(novoAlarme));
 
         alert("alarme salvo com sucesso!");
         window.location.assign("telaAlarmes.html")
