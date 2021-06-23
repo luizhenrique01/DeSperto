@@ -55,13 +55,13 @@ function Login() {
                         toast.addEventListener('mouseleave', Swal.resumeTimer)
                     }
                 });
-
+                
                 Toast.fire({
                     icon: 'success',
                     title: `Bem vindo, ${usuariosGravados[usuarioIndex].nomeUsuario} !`
                 });
-                window.location.href = 'telaInterna.html';
-
+                localStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado.nomeUsuario)); //salvando nome no localstorage
+                window.location.href = 'telaInterna.html'; 
             }
         }
     }

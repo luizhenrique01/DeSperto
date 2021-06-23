@@ -13,7 +13,6 @@ var som=0;
 var alarmeDias = new Array();
 var soneca
 var nomeDoAlarme
-
 var alarmeNotas
 var feriado
 var anotacoesAlarme
