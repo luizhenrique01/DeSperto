@@ -1,14 +1,41 @@
+
+function click1(){
+    
+    localStorage.setItem("alarmeSelecao",1);
+      window.location.assign("alarme.html")
+}
+function click2(){
+    localStorage.setItem("alarmeSelecao",2);
+      window.location.assign("alarme.html")
+      
+}
+function click3(){
+    localStorage.setItem("alarmeSelecao",3);
+      window.location.assign("alarme.html")
+      
+}
+function click4(){
+    localStorage.setItem("alarmeSelecao",4);
+      window.location.assign("alarme.html")
+      
+}
+function click5(){
+    localStorage.setItem("alarmeSelecao",5);
+      window.location.assign("alarme.html")
+}
 onload=()=>{
     document.getElementById('novoAlarme').onclick=function(){
         localStorage.setItem("alarmeSelecao",0);
           window.location.assign("alarme.html")
-          
     }
+  
     document.getElementById('voltar').onclick=function(){
         
-          window.location.assign("telaInterna.html")
-          
+        window.location.assign("telaInterna.html")
+        
     }
+    
+    
 
     var pastaAtual=localStorage.getItem("pastaAtual");
     var abrirPasta=new Array;
@@ -36,6 +63,7 @@ onload=()=>{
     let pastaNumero=localStorage.getItem("pastaNumero");
 
     if (abrirPasta[0]==1){ 
+      
         let alarmeData1=abrirPasta
         let div0=document.createElement("div0")
         div0.setAttribute('class','container')
@@ -47,7 +75,8 @@ onload=()=>{
         div2.setAttribute('class','col-8');
         div2.setAttribute('id','2div');
         let h4 = document.createElement("h4");
-       h4.setAttribute('id','click1');
+       
+       h4.onclick = new Function('click1()');
         h4.innerHTML=alarmeData1[1].nome;
        
         let p = document.createElement("p");
@@ -85,7 +114,10 @@ onload=()=>{
             document.getElementById("4div").append(label);
             document.getElementById("label1").append(input);
             document.getElementById("label1").append(span);
-        
+
+
+
+
         
     
     }
@@ -103,6 +135,7 @@ onload=()=>{
         let h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[1].nome;
         h4.setAttribute('id','click1');
+        h4.onclick = new Function('click1()');
         let p = document.createElement("p");
         p.innerHTML=alarmeData1[1].notas;
         p.setAttribute('id','1p');
@@ -151,6 +184,7 @@ onload=()=>{
          h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[2].nome;
         h4.setAttribute('id','click2');
+        h4.onclick = new Function('click2()');
          p = document.createElement("p");
         p.innerHTML=alarmeData1[2].notas;
         p.setAttribute('id','1p2');
@@ -204,6 +238,7 @@ onload=()=>{
         let h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[1].nome;
         h4.setAttribute('id','click1');
+        h4.onclick = new Function('click1()');
         let p = document.createElement("p");
         p.innerHTML=alarmeData1[1].notas;
         p.setAttribute('id','1p');
@@ -252,6 +287,7 @@ onload=()=>{
          h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[2].nome;
         h4.setAttribute('id','click2');
+        h4.onclick = new Function('click2()');
          p = document.createElement("p");
         p.innerHTML=alarmeData1[2].notas;
         p.setAttribute('id','1p2');
@@ -299,6 +335,7 @@ onload=()=>{
              h4 = document.createElement("h4");
             h4.innerHTML=alarmeData1[3].nome;
             h4.setAttribute('id','click3');
+            h4.onclick = new Function('click3()');
              p = document.createElement("p");
             p.innerHTML=alarmeData1[3].notas;
             p.setAttribute('id','1p3');
@@ -352,6 +389,7 @@ onload=()=>{
         let h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[1].nome;
         h4.setAttribute('id','click1');
+        h4.onclick = new Function('click1()');
         let p = document.createElement("p");
         p.innerHTML=alarmeData1[1].notas;
         p.setAttribute('id','1p');
@@ -400,6 +438,7 @@ onload=()=>{
          h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[2].nome;
         h4.setAttribute('id','click2');
+        h4.onclick = new Function('click2()');
          p = document.createElement("p");
         p.innerHTML=alarmeData1[2].notas;
         p.setAttribute('id','1p');
@@ -447,6 +486,7 @@ onload=()=>{
              h4 = document.createElement("h4");
             h4.innerHTML=alarmeData1[3].nome;
             h4.setAttribute('id','click3');
+            h4.onclick = new Function('click3()');
              p = document.createElement("p");
             p.innerHTML=alarmeData1[3].notas;
             p.setAttribute('id','1p');
@@ -494,6 +534,7 @@ onload=()=>{
              h4 = document.createElement("h4");
             h4.innerHTML=alarmeData1[4].nome;
             h4.setAttribute('id','click4');
+            h4.onclick = new Function('click4()');
              p = document.createElement("p");
             p.innerHTML=alarmeData1[4].notas;
             p.setAttribute('id','1p');
@@ -547,6 +588,7 @@ onload=()=>{
         let h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[1].nome;
         h4.setAttribute('id','click1');
+        h4.onclick = new Function('click1()');
         let p = document.createElement("p");
         p.innerHTML=alarmeData1[1].notas;
         p.setAttribute('id','1p');
@@ -595,6 +637,7 @@ onload=()=>{
          h4 = document.createElement("h4");
         h4.innerHTML=alarmeData1[2].nome;
         h4.setAttribute('id','click2');
+        h4.onclick = new Function('click2()');
          p = document.createElement("p");
         p.innerHTML=alarmeData1[2].notas;
         p.setAttribute('id','1p');
@@ -642,6 +685,7 @@ onload=()=>{
              h4 = document.createElement("h4");
             h4.innerHTML=alarmeData1[3].nome;
             h4.setAttribute('id','click3');
+            h4.onclick = new Function('click3()');
              p = document.createElement("p");
             p.innerHTML=alarmeData1[3].notas;
             p.setAttribute('id','1p');
@@ -688,13 +732,15 @@ onload=()=>{
             div2.setAttribute('id','2div');
              h4 = document.createElement("h4");
             h4.innerHTML=alarmeData1[4].nome;
-            h4.setAttribute('id','click5');
+            h4.setAttribute('id','click4');
+            h4.onclick = new Function('click4()');
              p = document.createElement("p");
             p.innerHTML=alarmeData1[4].notas;
             p.setAttribute('id','1p');
              div3 = document.createElement("div");
             div3.setAttribute('class','col-4');
             div3.setAttribute('id','3div');
+            
              h5 = document.createElement("h5");
             h5.innerHTML=alarmeData1[4].horas
             h5.setAttribute('id','5h');
@@ -735,6 +781,7 @@ onload=()=>{
                  h4 = document.createElement("h4");
                 h4.innerHTML=alarmeData1[5].nome;
                 h4.setAttribute('id','click5');
+                h4.onclick = new Function('click5()');
                  p = document.createElement("p");
                 p.innerHTML=alarmeData1[5].notas;
                 p.setAttribute('id','1p');
@@ -744,6 +791,7 @@ onload=()=>{
                  h5 = document.createElement("h5");
                 h5.innerHTML=alarmeData1[5].horas
                 h5.setAttribute('id','5h');
+
                
                  div4 = document.createElement("div4");
                 div4.setAttribute('class','row alarme');
@@ -772,27 +820,28 @@ onload=()=>{
                     document.getElementById("label1").append(span);
     
     }
-     document.getElementById('click1').onclick=function(){
+    
+     function click1(){
         localStorage.setItem("alarmeSelecao",1);
           window.location.assign("alarme.html")
           
     }
-    document.getElementById('click2').onclick=function(){
+   function click2(){
         localStorage.setItem("alarmeSelecao",2);
           window.location.assign("alarme.html")
           
     }
-    document.getElementById('click3').onclick=function(){
+    function click3(){
         localStorage.setItem("alarmeSelecao",3);
           window.location.assign("alarme.html")
           
     }
-    document.getElementById('click4').onclick=function(){
+   function click4(){
         localStorage.setItem("alarmeSelecao",4);
           window.location.assign("alarme.html")
           
     }
-    document.getElementById('click5').onclick=function(){
+    function click5(){
         localStorage.setItem("alarmeSelecao",5);
           window.location.assign("alarme.html")
           
