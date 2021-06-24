@@ -41,6 +41,7 @@ onload = () =>{
         let alarmeData1=JSON.parse(localStorage.getItem('1'));
         h3.setAttribute('id','1pasta');
         h3.onclick = new Function('click1()');
+
         let nome=alarmeData1;
         h3.innerHTML = nome;
             
@@ -61,6 +62,7 @@ onload = () =>{
         let alarmeData1=JSON.parse(localStorage.getItem('1'));
         h3.setAttribute('id','1pasta');
         h3.onclick = new Function('click1()');
+
         let nome=alarmeData1;
         h3.innerHTML = nome;
             
@@ -93,6 +95,7 @@ onload = () =>{
         let alarmeData1=JSON.parse(localStorage.getItem('1'));
         h3.setAttribute('id','1pasta');
         h3.onclick = new Function('click1()');
+
         let nome=alarmeData1;
         h3.innerHTML = nome;
             
@@ -121,15 +124,14 @@ onload = () =>{
                 h3.setAttribute('id','4pasta');
                 h3.onclick = new Function('click4()');
                     
-                    document.getElementById("pasta4").append(h3);
-                
-                
+                    document.getElementById("pasta4").append(h3);            
     }
     else if(pastaNumero==5){
         let h3 = document.createElement("h3");
         let alarmeData1=JSON.parse(localStorage.getItem('1'));
         h3.setAttribute('id','1pasta');
         h3.onclick = new Function('click1()');
+
         let nome=alarmeData1;
         h3.innerHTML = nome;
             
