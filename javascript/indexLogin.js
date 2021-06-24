@@ -48,20 +48,20 @@ function Login() {
                     toast: true,
                     position: 'top-end',
                     showConfirmButton: false,
-                    timer: 3000,
+                    timer: 5000,
                     timerProgressBar: true,
                     onOpen: (toast) => {
                         toast.addEventListener('mouseenter', Swal.stopTimer)
                         toast.addEventListener('mouseleave', Swal.resumeTimer)
                     }
                 });
-
+                
                 Toast.fire({
                     icon: 'success',
                     title: `Bem vindo, ${usuariosGravados[usuarioIndex].nomeUsuario} !`
                 });
-                window.location.href = 'alarme.html';
-
+                localStorage.setItem('usuarioLogado', JSON.stringify(usuarioLogado.nomeUsuario)); //salvando nome no localstorage
+                window.location.href = 'telaInterna.html'; 
             }
         }
     }
