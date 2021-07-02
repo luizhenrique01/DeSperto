@@ -150,15 +150,46 @@ body{
     border-radius: 7px;
 }
 
-iframe{
-    max-height: 100%;
-    max-width: 100%;
+div .container{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Parte das pasta - pastas em si*/
+
+.pasta4{
+    max-width: 97%;
+    background-color: white;
+    padding: 0px;
+    margin: 5px;
+    border-radius: 4px;
+} 
+
+.pasta4 .img-pasta4{
+    padding: 0px;
+}
+
+.pasta4 .txt-pasta4{
+    padding: 0px;
+}
+
+ .pasta4 img{
+    width: 90px;
+    padding: 0px;
+}
+
+ .pasta4 h3{
+    padding-top: 35px;
+    text-align:justify;
+    color: #C30000;
 }
 
 .Pastas .Texto-info{
     text-align: center;
     color: rgb(179, 179, 179);
 }
+
+/*Fim part das pastas*/
 
 .div1{
     display: flex;
