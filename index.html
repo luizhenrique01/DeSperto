@@ -4,20 +4,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <title>Login</title>
+    <link rel="stylesheet" href="stylesheet/stylelogin.css">    
+    <link rel="shortcut icon" href="img/prt--dp-01-02.png">
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-
-    <link rel="stylesheet" href="stylesheet/stylelogin.css">
-
     <script src="javascript/indexLogin.js"></script>
+
+    <title>DesPerto - Login</title>    
+
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
+    <header class="container">
+        <div>
             <div class="row">
                 <div class="col-12">
                     <div class="nuvemred">
@@ -25,20 +28,17 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-12 logo1">
-                    <img src="img/logo1.png" class="logo1">
-                </div>
+            <div class="col-12 logo1">
+                <img src="img/logo1.png" class="logo1">
             </div>
         </div>
     </header>
 
-    <main>
+    <main class="container">
 
-        <div class="container">
+        <div class="Login">
             <div class="row">
-                <div class="col-11 interface-loguin">
+                <div class="col-12 interface-loguin">
 
                     <h1>Email:</h1>
                     <input type="email" class="label" autocomplete="off" placeholder="Email" name="loguin_acesso"
@@ -46,9 +46,6 @@
                     <h2>Senha:</h2>
                     <input type="password" class="label" placeholder="******" name="senha_acesso" id="senhaUsuario"
                         required />
-
-                    <p class="t1">Esqueceu a senha?</p> <a class="esqueceu-senha" href="url">Redefinir Senha</a>
-
                     <div class="botao">
                         <button class="btn btn-primary" type="submit" onclick="Login()" id="entrar">Entrar</button>
                     </div>
@@ -64,11 +61,11 @@
 
     </main>
 
-    <footer>
-        <div class="container nuvemblue">
+    <footer class="container">
+        <div class="nuvemblue">
             <div class="row">
-                <div class="col-12 ">
-                    <img class="png2" src="img/bluenuvem.png">
+                <div class=" col-12 ">
+                    <img class=" png2" src="img/bluenuvem.png">
                 </div>
             </div>
         </div>

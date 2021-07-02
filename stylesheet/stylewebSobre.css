@@ -1,10 +1,15 @@
+/* Corpo */
 body{
     margin: 0px;
-    padding: 0px;
     max-width: 100%;
-    background-color: rgb(255, 255, 255);
+    max-height: 100%;
+    background-image:url(img/fundo.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+
+/*Header*/
 header{
     background: #2B5C7C;
     text-align: center;
@@ -12,11 +17,7 @@ header{
 
 .header_area .logo{
     max-width: 170px;
-    
 }
-
-
-
 
 /*navegação*/
 .menu_area{
@@ -35,6 +36,7 @@ header{
     background-color: #ffffff !important;
     color: #C30000!important;
 }
+
 
 /*Main*/
 
@@ -74,10 +76,12 @@ section .texto-principal p{
 
 .Interface-principal img{
     max-width: 75%;
+    box-shadow: 8px 5px 15px #C30000;
 }
 
 .Interface-secundaria img{
     max-width: 75%;
+    box-shadow: 8px 5px 15px #C30000;
 }
 
 .Interface p{
@@ -107,6 +111,7 @@ section .texto-principal p{
 
 .Imagem-Funcionalidade img{
     max-width: 75%;
+    box-shadow: 8px 5px 15px #C30000;
 }
 
 .Funcionalidades ul{

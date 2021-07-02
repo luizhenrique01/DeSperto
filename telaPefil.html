@@ -6,19 +6,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="stylesheet/stylePerfil.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1f9a755259.js" crossorigin="anonymous"></script>
     <title>Perfil</title>
   </head>
   <body>
-    <header class="container">
-        <div class="row">
-            <div class="col-1">
-                <button class="btn-voltar"><i class="bi bi-list icone"></i></button>
-              </div>    
-            <div class="col-11">
-                <img src="/img/prt--dp-01-02.png" class="logo" alt="logotipo"> 
-            </div>
+    <header>
+        <div>
+          <div class="menu_area">
+            <nav class="nav">
+              <input type="checkbox" id="menuToggle">
+              <label for="menuToggle" class="menu-icon">
+                <i class="fas fa-bars"></i>
+                <i class="far fa-times-circle"></i>
+              </label>
+              <ul class="menu">
+                <li id="imgperfil"><img class="imgUsuario" src="/img/img-usuario.png"></li>
+                <li><a class="flex-sm-fill text-sm-center nav-link" href="telaInterna.html">Início</a></li>
+                <li><a class="flex-sm-fill text-sm-center nav-link" href="telaPefil.html">Perfil</a></li>
+                <li><a class="flex-sm-fill text-sm-center nav-link" href="telaComoUsar.html">Como usar</a></li>
+                <li><a class="flex-sm-fill text-sm-center nav-link" href="telaSobreApp.html">Sobre</a></li>            
+                <li><a class="flex-sm-fill text-sm-center nav-link" href="#">Sair</a></li>
+              </ul>
+            </nav>
+          </div>
+          <img class="img1" src="/img/prt--dp-01-02.png">
         </div>
-    </header>
+      </header>
 
     <main>
         <h1>Perfil</h1>
