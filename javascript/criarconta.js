@@ -1,3 +1,9 @@
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
 function CriarConta() {
     var nomeUsuario = document.getElementById('nomeUsuario').value;
     var emailUsuario = document.getElementById('emailUsuario').value;
@@ -102,9 +108,5 @@ function CriarConta() {
         }
     }
 
-    function validateEmail(email) {
-        var re = /\S+@\S+\.\S+/;
-        return re.test(email);
-    }
 
 }

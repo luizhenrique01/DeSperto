@@ -822,9 +822,7 @@ onload=()=>{
                     document.getElementById("label1").append(span);
     
     }
-    
-    
-    
+      
     var alarmeQt=abrirPasta[0];
     
 }
