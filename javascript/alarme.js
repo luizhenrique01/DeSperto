@@ -16,7 +16,9 @@ var nomeDoAlarme
 var alarmeNotas
 var feriado
 var anotacoesAlarme
+var botaoTemp=0
 onload = () => {
+    
     document.getElementById('botaofechar').onclick=function(){
     window.location.assign("telaAlarmes.html")
     }
@@ -215,11 +217,19 @@ onload = () => {
     }
     if (botaoFeriado == 0) {
 
-        botaoFeriado = 1;
+        document.getElementById('botaoFeriadoToggle').checked=false;
     }
     else {
 
-        botaoFeriado = 0;
+        document.getElementById('botaoFeriadoToggle').checked=true;
+    }
+    if (botaoTemp == 0) {
+
+        document.getElementById('botaoAlarmeTempToggle').checked=false;
+    }
+    else {
+
+        document.getElementById('botaoAlarmeTempToggle').checked=true;
     }
     document.querySelector('#botaosalvar').onclick = function () {
 
@@ -249,13 +259,13 @@ onload = () => {
         
         if (alarmeSelecao == 0) {
             primeiro++;
-            novoAlarme[primeiro] = criarAlarme(alarmeHoras,som, alarmeDias, nomeDoAlarme, alarmeNotas, soneca, feriado, botaoSoneca,);
+            novoAlarme[primeiro] = criarAlarme(alarmeHoras,som, alarmeDias, nomeDoAlarme, alarmeNotas, soneca, feriado, botaoSoneca,botaoTemp);
 alarmeSelecao++
             novoAlarme[0] = primeiro;
 
         }
         else {
-            novoAlarme[primeiro] = criarAlarme(alarmeHoras,som,  alarmeDias, nomeDoAlarme, alarmeNotas, soneca, feriado, botaoSoneca,);
+            novoAlarme[primeiro] = criarAlarme(alarmeHoras,som,  alarmeDias, nomeDoAlarme, alarmeNotas, soneca, feriado, botaoSoneca,botaoTemp);
         }
 
         localStorage.setItem("A"+pastaAtual, JSON.stringify(novoAlarme));
@@ -268,7 +278,7 @@ alarmeSelecao++
 
     }
 
-    function criarAlarme(chave1,chave2, chave3, chave4, chave5, chave6, chave7, chave8, ) {
+    function criarAlarme(chave1,chave2, chave3, chave4, chave5, chave6, chave7, chave8,chave9 ) {
         let newAlarme = {
             "horas": chave1,
             "som":chave2,
@@ -278,6 +288,7 @@ alarmeSelecao++
             "soneca": chave6,
             "feriado": chave7,
             "botaoSoneca": chave8,
+            "temporario":chave9
 
         }
         return newAlarme;
@@ -416,14 +427,28 @@ alarmeSelecao++
     }
     document.getElementById("botaoFeriadoToggle").onclick = function () {
         if (botaoFeriado == 0) {
-
+           
             botaoFeriado = 1;
+            
         }
-        else {
-
+        else if (botaoFeriado == 1){
+            
             botaoFeriado = 0;
 
         }
+
+}
+document.getElementById("botaoAlarmeTempToggle").onclick = function () {
+    if (botaoTemp == 0) {
+       
+        botaoTemp = 1;
+        
+    }
+    else if (botaoTemp == 1){
+        
+        botaoTemp = 0;
+
+    }
 
 }
     

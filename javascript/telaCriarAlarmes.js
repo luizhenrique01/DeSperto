@@ -24,6 +24,7 @@ function click5(){
       window.location.assign("alarme.html")
 }
 onload=()=>{
+    
     document.getElementById('novoAlarme').onclick=function(){
         localStorage.setItem("alarmeSelecao",0);
           window.location.assign("alarme.html")
@@ -40,6 +41,7 @@ onload=()=>{
     var pastaAtual=localStorage.getItem("pastaAtual");
     var abrirPasta=new Array;
     
+    document.getElementById('nomePastaPlace').innerHTML=localStorage.getItem(pastaAtual)
     switch(pastaAtual){
         case "1":
             abrirPasta=JSON.parse(localStorage.getItem("A1"));
@@ -820,34 +822,7 @@ onload=()=>{
                     document.getElementById("label1").append(span);
     
     }
-    
-     function click1(){
-        localStorage.setItem("alarmeSelecao",1);
-          window.location.assign("alarme.html")
-          
-    }
-   function click2(){
-        localStorage.setItem("alarmeSelecao",2);
-          window.location.assign("alarme.html")
-          
-    }
-    function click3(){
-        localStorage.setItem("alarmeSelecao",3);
-          window.location.assign("alarme.html")
-          
-    }
-   function click4(){
-        localStorage.setItem("alarmeSelecao",4);
-          window.location.assign("alarme.html")
-          
-    }
-    function click5(){
-        localStorage.setItem("alarmeSelecao",5);
-          window.location.assign("alarme.html")
-          
-    }
-    
-    
+      
     var alarmeQt=abrirPasta[0];
     
 }
