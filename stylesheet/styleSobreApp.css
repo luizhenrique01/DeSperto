@@ -1,6 +1,109 @@
+#menuToggle{
+    display: none;
+}
+.menu-icon{
+    display: none;
+}
+
+.menu a{
+    color: white;
+}
+
+.menu a:hover{
+    color: white;
+    background-color: #a70000;
+}
+
+@media screen and (max-width: 1600px) {
+    #imgperfil img{
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    header .container{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+    }
+
+    .menu{
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 0%;
+        height: 0%;
+        overflow:hidden;
+        background-color: #C30000;
+        padding: 0px;
+        margin: 0px;
+        transition: width 0.3s;
+
+    }
+    .menu_area{
+        margin-top: 0px !important;
+    }
+
+    .menu_area nav ul{
+        margin-left: 0px;
+    }
+
+    .menu li {
+        display: absolute;
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .menu-icon{
+        position: absolute;
+        display: block;
+        color:rgb(255, 255, 255);
+        top: 15px;
+        left: 15px;
+        line-height: 60px;
+        z-index: 999;
+    }
+
+    .menu-icon i{
+      font-size: 2rem;  
+      color: #ffffff;
+    }
+
+    #menuToggle:checked ~ label i:nth-child(2){           
+        position: fixed; 
+        display: block;
+        color: white;
+    }
+
+    #menuToggle:checked ~ label i:first-child{    
+        display: none;
+    }
+
+    #menuToggle:not(checked) ~ label i:nth-child(2){
+        display: none;
+    }
+
+    #menuToggle:not(checked) ~ label i:first-child{
+        display: block;
+    }
+
+    #menuToggle:checked ~ ul{
+        height: 100%;
+        width: 70%;
+        
+    }
+        
+}
+
+.img1{
+    width: 100px;
+    float: right;
+}
+
 header{
     background-color: #008AD8;
-    height: 60px;
+    height: 70px;
 }
 .logo{
     margin-top: -15px !important;
@@ -26,10 +129,10 @@ header{
 }
 
 #sobre{
-    text-align: center;
-color:#008AD8;
-font-size: 30px;
-margin-top: 30px;}
+    text-align: left;
+    color:#008AD8;
+    font-size: 30px;
+    margin-top: 30px;}
 
 #texto{
     font-size: 18px;
@@ -64,5 +167,6 @@ margin-top: 30px;}
 
             .rodape{font-size: 26px;
                 color: #A9A9A9;
+            }
              
 }

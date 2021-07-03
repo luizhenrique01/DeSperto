@@ -8,54 +8,28 @@ body{
     background-position: center;
 }
 
-/* cabeçalho */
+/*Header*/
 header{
-    position: relative;
-    max-width: 100%;
     background: #2B5C7C;
     text-align: center;
 }
 
-header{
-    margin: 0px;
-    padding: 10px;
+.header_area .logo{
+    max-width: 170px;    
 }
 
-.header_area .logo{
-    display: block;
-    max-width: 150px;
-    left: 80%;
-    
-}
+
 
 /*navegação*/
 .menu_area{
-    margin-top: 1%;
+    margin-top: 40px;
 }
 
-.menu_area nav{
-    right: 10px;
+.menu_area nav a{
+    color:white;
+    margin-bottom: 10px;
 }
-
-.menu_area nav ul{
-    list-style: none;
-    margin: 0;
-    padding: 0px;
-}
-
-.menu_area nav ul li {
-    float: left;
-}
-
-.menu_area nav ul li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.menu_area .nav a:hover{
+.menu_area a:hover{
     color:#2B5C7C;
     background-color: #ffffff;
 }
@@ -64,7 +38,7 @@ header{
     color: #C30000!important;
 }
 
-/*Menu toggle*/
+/*Menu toggle
 #menuToggle{
     display: none;
 }
@@ -165,6 +139,8 @@ header{
     }
         
 }
+
+*/
 
 /*area principal do corpo*/
 .main{

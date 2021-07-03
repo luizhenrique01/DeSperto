@@ -1,21 +1,37 @@
 
+
+body{
+    max-width: 100%;
+    background-color: white ;
+   overflow: hidden;
+}
+
+main{
+    max-width: 100%;
+}
 /* header */
 div > .logo1{
     max-width: 285px;
     margin: 0 auto;
-    margin-bottom: 10px;
-    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+}
+
+/*Deixar sem margin geradas automaticas*/
+.row, .container{
+    margin:  0 auto;
 }
 
 /* main */
 div .interface-loguin{
-    padding: 20px;
+    padding: 15px;
     padding-bottom: 10px !important;
     margin: 0 auto;
     background-color:#DADADA;
     border-style:hidden;
     border-radius: 17px;
     margin-bottom: 10px;
+    
 }
 
 /* usuário e senha */
@@ -36,9 +52,9 @@ h2{
 
 /* campo de texto */
 .label{
-    max-width: 300px;
+    min-width: 100%;
     min-height: 50px;
-    border-radius: 10px;
+    border-radius: 7px;
     border-style: solid;
 }
 
@@ -82,8 +98,9 @@ div .botao{
 
 /* novo por aqui? | criar nova conta (div em que as duas estão) */
 div .fora-interface{
+
     margin: 0 auto;
-    width: 350px;
+    width: 320px;
     text-align: center;
 }
 
@@ -95,32 +112,59 @@ div .fora-interface{
 }
 
 /* footer */
+footer{
+    padding: 0px;
+}
 div > .png2{
-    max-width: 100px;
+    max-width: 80px;
 }
 .nuvemblue {
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 0;
 }
+
 .nuvemblue img {
     position: absolute;
     right: 0px;
+    bottom: 0px;
 }
 
 div > .png1{
-    max-width: 100px;
+    max-width: 80px;
 }
 .nuvemred {
     width: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0;
 }
 .nuvemred img {
     position: absolute;
     left: 0px;
+    top: 0px;
+}
+
+@media(max-width: 320px){
+
+    body{
+        background-image: url(Fundo.png);
+        max-width: 568px;
+        max-height: 320px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .Login .fora-interface{
+        max-width: 99%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    div > .png2{
+        max-width: 70px;
+    }
+    .nuvemblue {
+        width: 100%;
+    }
+    
+    .nuvemblue img {
+        display: block;
+        bottom: -44px;
+    }
 }
