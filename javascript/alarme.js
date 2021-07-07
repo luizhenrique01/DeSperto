@@ -50,18 +50,20 @@ onload = () => {
             switch(pegar[1].som){
                 case 1:
                     document.getElementById("dropdownMenuButton").innerHTML="som1";
+                    som=1
                     break;
                     case 2:
                         document.getElementById("dropdownMenuButton").innerHTML="som2";
+                        som=2
                         break;
                         case 3:
                             document.getElementById("dropdownMenuButton").innerHTML="som3";
+                            som=3
                             break;
             }
             break;
         case "2":
-            document.getElementById("nomeAlarme").value = pegar[2].nome
-            document.getElementById("minutos").value = pegar[2].minutos
+            document.getElementById("agendamento").value = pegar[2].horas
             botaoD = pegar[2].dias[0];
             botaoS = pegar[2].dias[1];
             botaoT = pegar[2].dias[2];
@@ -73,10 +75,25 @@ onload = () => {
             botaoFeriado = pegar[2].feriado
             document.getElementById("soneca").value = pegar[2].soneca
             document.getElementById("notasDoAlarmeBox").value = pegar[2].notas
+           
+        
+            switch(pegar[2].som){
+                case 1:
+                    document.getElementById("dropdownMenuButton").innerHTML="som1";
+                    som=1
+                    break;
+                    case 2:
+                        document.getElementById("dropdownMenuButton").innerHTML="som2";
+                        som=2
+                        break;
+                        case 3:
+                            document.getElementById("dropdownMenuButton").innerHTML="som3";
+                            som=3
+                            break;
+            }
             break;
         case "3":
-            document.getElementById("nomeAlarme").value = pegar[3].nome
-            document.getElementById("minutos").value = pegar[3].minutos
+            document.getElementById("agendamento").value = pegar[3].horas
             botaoD = pegar[3].dias[0];
             botaoS = pegar[3].dias[1];
             botaoT = pegar[3].dias[2];
@@ -88,10 +105,23 @@ onload = () => {
             botaoFeriado = pegar[3].feriado
             document.getElementById("soneca").value = pegar[3].soneca
             document.getElementById("notasDoAlarmeBox").value = pegar[3].notas
+            switch(pegar[3].som){
+                case 1:
+                    document.getElementById("dropdownMenuButton").innerHTML="som1";
+                    break;
+                    som=1
+                    case 2:
+                        document.getElementById("dropdownMenuButton").innerHTML="som2";
+                        break;
+                        som=2
+                        case 3:
+                            document.getElementById("dropdownMenuButton").innerHTML="som3";
+                            som=3
+                            break;
+            }
             break;
         case "4":
-            document.getElementById("nomeAlarme").value = pegar[4].nome
-            document.getElementById("minutos").value = pegar[4].minutos
+            document.getElementById("agendamento").value = pegar[4].horas
             botaoD = pegar[4].dias[0];
             botaoS = pegar[4].dias[1];
             botaoT = pegar[4].dias[2];
@@ -103,10 +133,23 @@ onload = () => {
             botaoFeriado = pegar[4].feriado
             document.getElementById("soneca").value = pegar[4].soneca
             document.getElementById("notasDoAlarmeBox").value = pegar[4].notas
+            switch(pegar[4].som){
+                case 1:
+                    document.getElementById("dropdownMenuButton").innerHTML="som1";
+                    break;
+                    som=1
+                    case 2:
+                        document.getElementById("dropdownMenuButton").innerHTML="som2";
+                        break;
+                        som=2
+                        case 3:
+                            document.getElementById("dropdownMenuButton").innerHTML="som3";
+                            som=3
+                            break;
+            }
             break;
         case "5":
-            document.getElementById("nomeAlarme").value = pegar[5].nome
-            document.getElementById("minutos").value = pegar[5].minutos
+            document.getElementById("agendamento").value = pegar[5].horas
             botaoD = pegar[5].dias[0];
             botaoS = pegar[5].dias[1];
             botaoT = pegar[5].dias[2];
@@ -118,8 +161,21 @@ onload = () => {
             botaoFeriado = pegar[5].feriado
             document.getElementById("soneca").value = pegar[5].soneca
             document.getElementById("notasDoAlarmeBox").value = pegar[5].notas
-            break;
-
+            switch(pegar[5].som){
+                case 1:
+                    document.getElementById("dropdownMenuButton").innerHTML="som1";
+                    som=1
+                    break;
+                    case 2:
+                        document.getElementById("dropdownMenuButton").innerHTML="som2";
+                        som=2
+                        break;
+                        case 3:
+                            document.getElementById("dropdownMenuButton").innerHTML="som3";
+                            som=3
+                            break;
+            }
+break;
 
 
 
@@ -265,7 +321,7 @@ alarmeSelecao++
 
         }
         else {
-            novoAlarme[primeiro] = criarAlarme(alarmeHoras,som,  alarmeDias, nomeDoAlarme, alarmeNotas, soneca, feriado, botaoSoneca,botaoTemp);
+            novoAlarme[alarmeSelecao] = criarAlarme(alarmeHoras,som,  alarmeDias, nomeDoAlarme, alarmeNotas, soneca, feriado, botaoSoneca,botaoTemp);
         }
 
         localStorage.setItem("A"+pastaAtual, JSON.stringify(novoAlarme));
