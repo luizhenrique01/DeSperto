@@ -19,6 +19,7 @@ setInterval(function alarmeTocar() {
     let dia = data.getDate()
     let horaAtual = hora + ":" + minutos
     for (contador = 0; contador < pastaNumero; contador++) {
+
         let contador3 = 1
         let pastaNome = "A" + (contador + 1)
         let pastaAtual = JSON.parse(localStorage.getItem(pastaNome))
@@ -27,23 +28,28 @@ setInterval(function alarmeTocar() {
                 if (feriados[contador4][0] == pastaAtual[contador3].feriado == 1 && mesAtual && feriados[contador4][1] == dia) {
                 }
                 else {
+
                     if (pastaAtual[contador3].dias[0] == 1 && diaAtual == 0 &&pastaAtual[contador3].horas == horaAtual) {
                       
                             if (pastaAtual[contador3].som == 1) {
                                 let audio = new Audio('sons/som1.mp3');
                                 audio.play();
                                 alert(pastaAtual[contador3].notas)
-                               
+                             
                             }
                             else if (pastaAtual[contador3].som == 2) {
                                 let audio = new Audio('sons/som2.mp3');
                                 audio.play();
+
                                 alert(pastaAtual[contador3].notas)
+
                             }
                             else if (pastaAtual[contador3].som == 3) {
                                 let audio = new Audio('sons/som3.mp3');
                                 audio.play();
+
                                 alert(pastaAtual[contador3].notas)
+
                             }
                         
                     }
@@ -201,12 +207,8 @@ setInterval(function alarmeTocar() {
         }
 
     }
-
-
-
-
-
 }, 6000)
+
 function checkTime(i) {
     if (i < 10) {
         i = "0" + i;

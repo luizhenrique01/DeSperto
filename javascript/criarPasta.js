@@ -18,7 +18,9 @@ document.getElementById('pastaSalvar').onclick = function (){
     localStorage.setItem(pastaNumero, JSON.stringify(newAlarme));
     localStorage.setItem("pastaNumero",pastaNumero);
     localStorage.setItem(pastaNome,JSON.stringify(pasta));
+
      window.location.assign("telaInterna.html");
+
      
     }
 }
