@@ -2,7 +2,9 @@ var pastaNumero=0;
 pastaNumero=localStorage.getItem("pastaNumero");
 
 onload =()=>{
-    
+    document.getElementById("voltar").onclick = function () {
+        
+        window.location.assign("telaInterna.html")
     let newAlarme 
 
 document.getElementById('pastaSalvar').onclick = function (){
@@ -17,5 +19,7 @@ document.getElementById('pastaSalvar').onclick = function (){
     localStorage.setItem("pastaNumero",pastaNumero);
     localStorage.setItem(pastaNome,JSON.stringify(pasta));
      window.location.assign( "telaInterna.html");
+     
+    }
 }
 }
