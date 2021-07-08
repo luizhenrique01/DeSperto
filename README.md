@@ -11,14 +11,9 @@ Na matéria de Introdução Web com acompanhamento do professor João Caram Sant
 
 Para instalar a aplicação você precisará usar o LocalHost da sua maquina e ter acesso a internet para carregar os scripts
 
-## Versão Sprint 3
+## Versão Final v0.0
 
-Na versão para o Sprint 3 foram implementadas:
-
-index.html => Implementação do script de login puxando dados do LocalStorage junto com a verificação para o usuário entrar em sua conta.
-cadastro.html => Implementação do script de criação de usuarios e armazenamento no LocalStorage, junto com uma verificação anti duplicação de usuarios.
-alarme.html => Implementação das funcionalidades do frontend e script de criação de novo alarme.
-alarme.js, criarconta.js & indexLogin.js => Scripts para o funcionamento das aplicações acima. 
+Na versão v0.0 todas implementações estão funcionando, nas versões futuras serão implementadas melhorias de desempenho e segurança. 
 
 ## License 
 [MIT](https://choosealicense.com/licenses/mit/)

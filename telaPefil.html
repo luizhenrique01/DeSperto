@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="stylesheet/stylePerfil.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1f9a755259.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="javascript/dados.js"></script>
     <title>Perfil</title>
   </head>
   <body>
@@ -25,7 +27,7 @@
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="telaPefil.html">Perfil</a></li>
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="telaComoUsar.html">Como usar</a></li>
                 <li><a class="flex-sm-fill text-sm-center nav-link" href="telaSobreApp.html">Sobre</a></li>            
-                <li><a class="flex-sm-fill text-sm-center nav-link" href="#">Sair</a></li>
+                <li><a class="flex-sm-fill text-sm-center nav-link" href="#" onclick="Deslogar()" >Sair</a></li>
               </ul>
             </nav>
           </div>
@@ -39,7 +41,7 @@
             <img class="imgUsuario" src="/img/img-usuario.png">
         </div>
 
-        <p class="nomeUsuario">Nome usuário</p>
+        <p class="nomeUsuario" id="nomeUsuario"></p>
         
         <div class="container">
             <div class="row">
